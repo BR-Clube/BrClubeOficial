@@ -4,9 +4,12 @@
   "description": "Projeito feito para facilitar processos da empresa.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js",
+    "start": "nodemon index.js",
     "test": "testes"
   },
   "author": "Akley Alves",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
 }
