@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário com Backend Node.js</title>
+</head>
+<body>
+
+  <h1>Formulário com Backend Node.js</h1>
+
+  <form id="meuFormulario" action="/processar-formulario" method="post">
+    <label for="input1">Input 1:</label>
+    <input type="text" id="input1" name="input1"><br>
+
+    <label for="input2">Input 2:</label>
+    <input type="text" id="input2" name="input2"><br>
+
+    <!-- Adicione os outros inputs conforme necessário -->
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="valoresInseridos"></div>
+
+  <!-- Adicione o script para manipular o DOM -->
+  <script>
+    document.getElementById('meuFormulario').addEventListener('submit', function (event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      const formData = new FormData(this);
+      const valoresInseridosDiv = document.getElementById('valoresInseridos');
+
+      // Limpa a div antes de inserir os novos valores
+      valoresInseridosDiv.innerHTML = '';
+
+      // Exibe os valores do formulário abaixo do botão de envio
+      for (const [key, value] of formData.entries()) {
+        const paragrafo = document.createElement('p');
+        paragrafo.textContent = `olá ${value} seu nome é ${value}`;
+        valoresInseridosDiv.appendChild(paragrafo);
+      }
+    });
+  </script>
+
+</body>
+</html>
