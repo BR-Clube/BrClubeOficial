@@ -4,7 +4,7 @@
   "description": "Projeito feito para facilitar processos da empresa.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index-2.js",
+    "start": "nodemon index.js",
     "test": "testes"
   },
   "author": "Akley Alves",

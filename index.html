@@ -1,48 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário com Backend Node.js</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário BR Clube</title>
 </head>
+
 <body>
+    <form id="brClubeForm">
+        <label for="nome">Nome do associado(a): </label>
+        <input type="text" id="nome" required><br>
 
-  <h1>Formulário com Backend Node.js</h1>
+        <label for="placa">Placa: </label>
+        <input type="text" id="placa" required><br>
 
-  <form id="meuFormulario" action="/processar-formulario" method="post">
-    <label for="input1">Input 1:</label>
-    <input type="text" id="input1" name="input1"><br>
+        <label for="vencimentoBoleto">Vencimento do boleto (dia/mês): </label>
+        <input type="text" id="vencimentoBoleto" required><br>
 
-    <label for="input2">Input 2:</label>
-    <input type="text" id="input2" name="input2"><br>
+        <label for="whatsapp">Whatsapp: </label>
+        <input type="text" id="whatsapp" required><br>
 
-    <!-- Adicione os outros inputs conforme necessário -->
+        <label for="endereco">Endereço: </label>
+        <input type="text" id="endereco" required><br>
 
-    <button type="submit">Enviar</button>
-  </form>
+        <label for="cep">CEP: </label>
+        <input type="text" id="cep" required><br>
 
-  <div id="valoresInseridos"></div>
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" required><br>
 
-  <!-- Adicione o script para manipular o DOM -->
-  <script>
-    document.getElementById('meuFormulario').addEventListener('submit', function (event) {
-      event.preventDefault(); // Impede o envio padrão do formulário
+        <label for="sexo">Digite h se homem ou m para mulher: </label>
+        <input type="text" id="sexo" required><br>
 
-      const formData = new FormData(this);
-      const valoresInseridosDiv = document.getElementById('valoresInseridos');
-
-      // Limpa a div antes de inserir os novos valores
-      valoresInseridosDiv.innerHTML = '';
-
-      // Exibe os valores do formulário abaixo do botão de envio
-      for (const [key, value] of formData.entries()) {
-        const paragrafo = document.createElement('p');
-        paragrafo.textContent = `olá ${value} seu nome é ${value}`;
-        valoresInseridosDiv.appendChild(paragrafo);
-      }
-    });
-  </script>
-
+        <button type="button" onclick="enviarFormulario()">Enviar</button>
+    </form>
 </body>
-</html>
