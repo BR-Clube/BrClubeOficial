@@ -14,9 +14,9 @@ function enviarFormulario() {
     let informacoes = '';
 
     if (sexo.toLowerCase() === 'h') {
-        saudacao = `<b><br>Olá, ${nome} Tudo bem com você? <br><br> Sr. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês de ${mes} de 2024. <br><br> Vencimento: <br><br>`;
+        saudacao = `<b><br>Olá, ${nome} <br> Tudo bem com você? <br><br> Sr. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês de ${mes} de 2024. <br><br> Vencimento: <br><br>`;
     } else if (sexo.toLowerCase() === 'm') {
-        saudacao = `<b><br>Olá, ${nome} Tudo bem com você? <br> Sra. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente aos mês de ${mes} de ${ano}. <br><br> Vencimento: <br><br>`;
+        saudacao = `<b><br>Olá, ${nome} <br> Tudo bem com você? <br> Sra. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente aos mês de ${mes} de ${ano}. <br><br> Vencimento: <br><br>`;
     }
 
     informacoes += `${data} - R$ ${dinheiro}<br><br>`;
