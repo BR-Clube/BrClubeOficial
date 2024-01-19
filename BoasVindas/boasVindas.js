@@ -14,9 +14,9 @@ function enviarFormulario() {
     let informacoes = '';
 
     if (sexo.toLowerCase() === 'h') {
-        saudacao = `Bem-vindo, ${nome}!<br><br> 💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!<br><br> Você é um dos nossos associados e nossa equipe está comprometida em superar suas expectativas.<br><br>`;
+        saudacao = `<b>Bem-vindo, ${nome}!<br><br> 💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!<br><br> Você é um dos nossos associados e nossa equipe está comprometida em superar suas expectativas.<br><br>`;
     } else if (sexo.toLowerCase() === 'm') {
-        saudacao = `Bem-vinda, ${nome}!<br><br> 💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!<br><br> Você é uma das nossas associadas e a equipe está comprometida em superar suas expectativas.<br><br>`;
+        saudacao = `<b>Bem-vinda, ${nome}!<br><br> 💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!<br><br> Você é uma das nossas associadas e a equipe está comprometida em superar suas expectativas.<br><br>`;
     }
 
     informacoes += `É muito importante que você confira todos os dados para que em caso de uma eventual ocorrência, possamos agilizar o processo e garantir a sua tranquilidade.<br><br>`;

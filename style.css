@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    background-color: blue;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+text-align: center;
+color: black;    
+}
+
+h2:hover {
+    color: #003cff;
+    font-size: 25px;
+}
+
+
