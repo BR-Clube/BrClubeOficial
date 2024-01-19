@@ -1,135 +1,39 @@
-function pulaLinha() {
-    console.log(``);
-};
+function enviarFormulario() {
+    // Obtenha os valores dos campos do formulário
+    const nome = document.getElementById('nome').value;
+    const placa = document.getElementById('placa').value;
+    const vencimentoBoleto = document.getElementById('vencimentoBoleto').value;
+    const whatsapp = document.getElementById('whatsapp').value;
+    const endereco = document.getElementById('endereco').value;
+    const cep = document.getElementById('cep').value;
+    const email = document.getElementById('email').value;
+    const sexo = document.getElementById('sexo').value;
 
-const readline = require('readline');
+    // Crie a saudação e as informações a serem exibidas
+    let saudacao = '';
+    let informacoes = '';
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+    if (sexo.toLowerCase() === 'h') {
+        saudacao = `Bem-vindo, ${nome}!`;
+    } else if (sexo.toLowerCase() === 'm') {
+        saudacao = `Bem-vinda, ${nome}!`;
+    }
 
-rl.question('Nome do associado(a):  ', (resposta) => {
+    informacoes += `💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!\n\n`;
+    informacoes += `Você é um(a) dos nossos(as) associados(as) e nossa equipe está comprometida em superar suas expectativas.\n`;
+    informacoes += `É muito importante que você confira todos os dados para que em caso de uma eventual ocorrência, possamos agilizar o processo e garantir a sua tranquilidade.\n\n`;
+    informacoes += `📍 Placa: ${placa}\n`;
+    informacoes += `⚠ Vencimento dos seus boletos será todo dia: ${vencimentoBoleto}\n`;
+    informacoes += `📭E SERÁ ENVIADO POR WHATSAPP: ${whatsapp}\n`;
+    informacoes += `Seu endereço é: ${endereco}\n`;
+    informacoes += `CEP: ${cep}\n`;
+    informacoes += `📧 E-mail: ${email}\n\n`;
+    informacoes += `Parabéns por você escolher a BR CLUBE!\n`;
+    informacoes += `#UmaNovaExperiência #OsMelhoresBenefícios\n`;
+    informacoes += `➡🙋CASO NÃO receba o boleto até 5 dias antes do vencimento favor entrar em contato conosco.\n\n`;
+    informacoes += `NOSSO NÚMERO COMERCIAL:\n(62) 3434-2622\nPARA ASSISTÊNCIA 24H:\n☎ (62) 3434-2622`;
 
-    rl.question('Placa: ', (respostaPlaca) => {
-
-        rl.question('Vencimento do boleto (dia/mês): ', (respostaVencimentoBoleto) => {
-
-            rl.question('Whatsapp: ', (respostaWhatsapp) => {
-
-                rl.question('Endereço: ', (respostaEndereco) => {
-
-                    rl.question('CEP: ', (respostaCep) => {
-
-                        rl.question('E-mail: ', (respostaEmail) => {
-
-                            rl.question('Digite h se homem ou m para mulher: ', (respostaHomemOuMulher) => {
-
-                                if (respostaHomemOuMulher == 'h' | respostaHomemOuMulher == 'H') {
-                                    console.log(`\nBem-vindo, ${resposta}`);
-
-                                    pulaLinha();
-
-                                    console.log(`💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!`);
-
-                                    pulaLinha();
-
-                                    console.log(`Você é um dos nossos associados e nossa equipe está comprometida em superar suas expectativas.`);
-
-                                    console.log(`É muito importante que você confira todos os dados para que em caso de uma eventual ocorrência, possamos agilizar o processo e garantir a sua tranquilidade.`);
-
-                                    pulaLinha();
-
-                                    console.log(`📍 Placa: ${respostaPlaca}`);
-
-                                    pulaLinha();
-
-                                    console.log(`⚠ Vencimento dos seus boletos será todo dia: ${respostaVencimentoBoleto}`);
-
-                                    pulaLinha();
-
-                                    console.log(`📭E SERÁ ENVIADO POR WHATSAPP: ${respostaWhatsapp}`);
-
-                                    pulaLinha();
-
-                                    console.log(`Seu endereço é: ${respostaEndereco}`);
-
-                                    pulaLinha();
-
-                                    console.log(`CEP: ${respostaCep}`);
-
-                                    pulaLinha();
-
-                                    console.log(`📧 E-mail: ${respostaEmail}`);
-
-                                    pulaLinha();
-
-                                    console.log(`Parabéns por você escolher a BR CLUBE!`);
-                                    console.log(`#UmaNovaExperiência #OsMelhoresBenefícios`);
-                                    console.log(`➡🙋CASO NÃO receba o boleto até 5 dias antes do vencimento favor entrar em contato conosco.`);
-
-                                    pulaLinha();
-
-                                    console.log(`NOSSO NÚMERO COMERCIAL:`);
-                                    console.log(`(62) 3434-2622`);
-                                    console.log(`PARA ASSISTÊNCIA 24H: `);
-                                    console.log(`☎ (62) 3434-2622`);
-
-                                } else {
-                                    console.log(`\nBem-vinda, ${resposta}`);
-
-                                    pulaLinha();
-
-                                    console.log(`💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!`);
-
-                                    pulaLinha();
-
-                                    console.log(`Você é uma das nossas associadas e nossa equipe está comprometida em superar suas expectativas.`);
-
-                                    console.log(`É muito importante que você confira todos os dados para que em caso de uma eventual ocorrência, possamos agilizar o processo e garantir a sua tranquilidade.`);
-
-                                    pulaLinha();
-
-                                    console.log(`📍 Placa: ${respostaPlaca}`);
-
-                                    pulaLinha();
-
-                                    console.log(`⚠ Vencimento dos seus boletos será todo dia: ${respostaVencimentoBoleto}`);
-
-                                    pulaLinha();
-
-                                    console.log(`📭E SERÁ ENVIADO POR WHATSAPP: ${respostaWhatsapp}`);
-
-                                    pulaLinha();
-
-                                    console.log(`Seu endereço é: ${respostaEndereco}`);
-
-                                    pulaLinha();
-
-                                    console.log(`CEP: ${respostaCep}`);
-
-                                    pulaLinha();
-
-                                    console.log(`📧 E-mail: ${respostaEmail}`);
-
-                                    pulaLinha();
-
-                                    console.log(`Parabéns por você escolher a BR CLUBE!`);
-                                    console.log(`#UmaNovaExperiência #OsMelhoresBenefícios`);
-                                    console.log(`➡🙋CASO NÃO receba o boleto até 5 dias antes do vencimento favor entrar em contato conosco.`);
-
-                                    pulaLinha();
-
-                                    console.log(`NOSSO NÚMERO COMERCIAL:`);
-                                    console.log(`(62) 3434-2622`);
-                                    console.log(`PARA ASSISTÊNCIA 24H: `);
-                                    console.log(`☎ (62) 3434-2622`);
-                                }
-                            });
-                        });
-                    });
-                });
-            });
-        });
-    });
-});
+    // Atualize o conteúdo do elemento com id 'texto'
+    const elementoTexto = document.getElementById("texto");
+    elementoTexto.textContent = `${saudacao}\n${informacoes}`;
+}
