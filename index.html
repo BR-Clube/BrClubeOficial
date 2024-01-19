@@ -10,6 +10,10 @@
             font-family: Arial, sans-serif;
         }
 
+        h1 {
+            text-align: center;
+        }
+
         form {
             max-width: 400px;
             margin: 0 auto;
@@ -44,6 +48,9 @@
 </head>
 
 <body>
+
+    <h1>MENSAGEM DE BOAS-VINDAS</h1>
+
     <form id="brClubeForm">
         <label for="nome">Nome do associado(a): </label>
         <input type="text" id="nome" required><br>
@@ -72,7 +79,9 @@
         <button type="button" onclick="enviarFormulario()">Enviar</button>
     </form>
 
+    <hr color="grey">
+
     <p id="texto"></p>
 
-    <script>"index.js"</script>
+    <script src="index.js"></script>
 </body>

@@ -14,26 +14,24 @@ function enviarFormulario() {
     let informacoes = '';
 
     if (sexo.toLowerCase() === 'h') {
-        saudacao = `Bem-vindo, ${nome}!`;
+        saudacao = `Bem-vindo, ${nome}!<br><br> 💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!<br><br> Você é um dos nossos associados e nossa equipe está comprometida em superar suas expectativas.<br><br>`;
     } else if (sexo.toLowerCase() === 'm') {
-        saudacao = `Bem-vinda, ${nome}!`;
+        saudacao = `Bem-vinda, ${nome}!<br><br> 💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!<br><br> Você é uma das nossas associadas e a equipe está comprometida em superar suas expectativas.<br><br>`;
     }
 
-    informacoes += `💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!\n\n`;
-    informacoes += `Você é um(a) dos nossos(as) associados(as) e nossa equipe está comprometida em superar suas expectativas.\n`;
-    informacoes += `É muito importante que você confira todos os dados para que em caso de uma eventual ocorrência, possamos agilizar o processo e garantir a sua tranquilidade.\n\n`;
-    informacoes += `📍 Placa: ${placa}\n`;
-    informacoes += `⚠ Vencimento dos seus boletos será todo dia: ${vencimentoBoleto}\n`;
-    informacoes += `📭E SERÁ ENVIADO POR WHATSAPP: ${whatsapp}\n`;
-    informacoes += `Seu endereço é: ${endereco}\n`;
-    informacoes += `CEP: ${cep}\n`;
-    informacoes += `📧 E-mail: ${email}\n\n`;
-    informacoes += `Parabéns por você escolher a BR CLUBE!\n`;
-    informacoes += `#UmaNovaExperiência #OsMelhoresBenefícios\n`;
-    informacoes += `➡🙋CASO NÃO receba o boleto até 5 dias antes do vencimento favor entrar em contato conosco.\n\n`;
-    informacoes += `NOSSO NÚMERO COMERCIAL:\n(62) 3434-2622\nPARA ASSISTÊNCIA 24H:\n☎ (62) 3434-2622`;
+    informacoes += `É muito importante que você confira todos os dados para que em caso de uma eventual ocorrência, possamos agilizar o processo e garantir a sua tranquilidade.<br><br>`;
+    informacoes += `📍 Placa: ${placa}<br><br>`;
+    informacoes += `⚠ Vencimento dos seus boletos será todo dia: ${vencimentoBoleto}<br><br>`;
+    informacoes += `📭E SERÁ ENVIADO POR WHATSAPP: ${whatsapp}<br><br>`;
+    informacoes += `Seu endereço é: ${endereco}<br><br>`;
+    informacoes += `CEP: ${cep}<br><br>`;
+    informacoes += `📧 E-mail: ${email}<br><br>`;
+    informacoes += `Parabéns por você escolher a BR CLUBE!<br>`;
+    informacoes += `#UmaNovaExperiência #OsMelhoresBenefícios<br><br>`;
+    informacoes += `➡🙋CASO NÃO receba o boleto até 5 dias antes do vencimento favor entrar em contato conosco: <br><br>`;
+    informacoes += `NOSSO NÚMERO COMERCIAL:<br><br>☎ (62) 3434-2622<br><br>PARA ASSISTÊNCIA 24H:<br><br>Whastsapp: (62) 3434-2622`;
 
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
-    elementoTexto.textContent = `${saudacao}\n${informacoes}`;
+    elementoTexto.innerHTML = `${saudacao}${informacoes}`;
 }
