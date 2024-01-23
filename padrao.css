@@ -1,16 +1,16 @@
 * {
     padding: 0;
     margin: 0;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 header{
-    background-color: blue;
+    background-color: #000056;
     text-align: center;
 }
 
 h1 {
-    background-color: blue;
+    background-color: #000056;
     font-size: 50px;
     color: white;
 }

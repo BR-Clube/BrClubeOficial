@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #000056;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 4.5%; /* ajuste conforme necessário */
+    margin-right: 70px; /* ajuste conforme necessário */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+li a:hover {
+    font-size: 24.5PX;
+    color: rgb(188, 255, 255);
+}
