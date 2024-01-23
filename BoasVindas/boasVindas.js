@@ -7,15 +7,18 @@ function enviarFormulario() {
     const endereco = document.getElementById('endereco').value;
     const cep = document.getElementById('cep').value;
     const email = document.getElementById('email').value;
-    const sexo = document.getElementById('sexo').value;
+
+    // Obtenha o valor do campo de radio de gênero
+    const generoElement = document.querySelector('input[name="genero"]:checked');
+    const genero = generoElement ? generoElement.value : '';
 
     // Crie a saudação e as informações a serem exibidas
     let saudacao = '';
     let informacoes = '';
 
-    if (sexo.toLowerCase() === 'h') {
+    if (genero === 'm') {
         saudacao = `<b>Bem-vindo, ${nome}!<br><br> 💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!<br><br> Você é um dos nossos associados e nossa equipe está comprometida em superar suas expectativas.<br><br>`;
-    } else if (sexo.toLowerCase() === 'm') {
+    } else if (genero === 'f') {
         saudacao = `<b>Bem-vinda, ${nome}!<br><br> 💥Parabéns, você fez uma ótima escolha ao decidir proteger seu Veículo com a BR CLUBE Proteção Veicular!<br><br> Você é uma das nossas associadas e a equipe está comprometida em superar suas expectativas.<br><br>`;
     }
 

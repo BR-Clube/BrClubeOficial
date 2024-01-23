@@ -6,16 +6,17 @@ function enviarFormulario() {
     const data = document.getElementById('data').value;
     const ano = document.getElementById('ano').value;
     const dinheiroTotal = document.getElementById('dinheiroTotal').value;
-    const sexo = document.getElementById('sexo').value;
 
+    const generoElement = document.querySelector('input[name="genero"]:checked');
+    const genero = generoElement ? generoElement.value : '';
 
     // Crie a saudação e as informações a serem exibidas
     let saudacao = '';
     let informacoes = '';
 
-    if (sexo.toLowerCase() === 'h') {
+    if (genero === 'm') {
         saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sr. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês de ${mes} de ${ano}. <br><br> Vencimento: ${data}  <br><br> Plava/Veículo: ${placa} <br><br>`;
-    } else if (sexo.toLowerCase() === 'm') {
+    } else if (genero === 'f') {
         saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sra. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente aos mês de ${mes} de ${ano}. <br><br> Vencimento: ${data}  <br><br> Plava/Veículo: ${placa} <br><br>`;
     }
 

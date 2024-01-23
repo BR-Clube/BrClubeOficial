@@ -36,9 +36,6 @@ input {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-}
-
-.brClubeContainer {
     width:45%; /* Ajuste a largura do formulário conforme necessário */
     float: left;
     padding-left: 5px;
@@ -51,11 +48,18 @@ input {
     text-align: center;
     display: flex; /* Torna o contêiner de texto um contêiner flexível */
     align-items: center; /* Centraliza o conteúdo verticalmente */
-
 }
 
-#texto {
-    margin: 0;
+#genero {
+    display: flex;
+    align-items: center;
+}
+
+#genero label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 5px; /* Ajuste a margem superior conforme necessário */
 }
 
 button {

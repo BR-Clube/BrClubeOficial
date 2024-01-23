@@ -38,8 +38,18 @@
                 <label for="cep">Valor total: R$</label>
                 <input type="text" id="dinheiroTotal" required><br>
 
-                <label for="sexo">Digite h se homem ou m para mulher: </label>
-                <input type="text" id="sexo" required><br>
+                <label for="genero" class="genero">Gênero:</label>
+                <div id="genero">
+                    <label>
+                        <input type="radio" name="genero" value="m"> Masculino
+                    </label>
+
+                    <label>
+                        <input type="radio" name="genero" value="f"> Feminino
+                    </label>
+                </div>
+
+                <br>
 
                 <button type="button" onclick="enviarFormulario()">Enviar</button>
                 <button type="button" onclick="copiarTexto()">Copiar Texto</button>
