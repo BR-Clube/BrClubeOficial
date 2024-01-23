@@ -7,6 +7,7 @@ function enviarFormulario() {
     const cor = document.getElementById('cor').value;
     const solicitante = document.getElementById('solicitante').value;
     const telefone = document.getElementById('telefone').value;
+    const fatorGerador = document.getElementById('fatorGerador').value;
     const observacaoFatorGerador = document.getElementById('observacaoFatorGerador').value;
     const chaveLocal = document.getElementById('chaveLocal').value;
     const observacaoResposta = document.getElementById('observacaoResposta').value;
@@ -27,6 +28,7 @@ function enviarFormulario() {
     informacoes += `Cor: ${cor}<br><br>`;
     informacoes += `Solicitante: ${solicitante}<br><br>`;
     informacoes += `Telefone: ${telefone}<br><br>`;
+    informacoes += `Fator Gerador: ${fatorGerador}<br><br>`;
     informacoes += `Observação Fator Gerador: ${observacaoFatorGerador}<br><br>`;
     informacoes += `Chave Local: ${chaveLocal}<br><br>`;
     informacoes += `Observação Resposta: ${observacaoResposta}<br><br>`;
