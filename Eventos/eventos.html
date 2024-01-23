@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Clube | Eventos</title>
+    <link rel="stylesheet" href="../padrao.css">
+    <link rel="stylesheet" href="../Nav/nav.css">
+</head>
+
+<body>
+
+    <nav>
+        <!-- Adicione a imagem da logo -->
+        <img src="../Images/brclube.png" alt="Logo da Empresa" class="logo">
+
+        <ul>
+            <li><a href="../index.html">MENU</a></li>
+            <li><a target="_blank" href="https://portal.sivisweb.com.br/loja/012/dashboard">COTAÇÕES</a></li>
+        </ul>
+    </nav>
+
+    <br>
+
+    <header>
+        <h1>EVENTOS</h1>
+    </header>
+
+    <br><br>
+
+    <div id="conteudoNoMeio">
+        <div id="brClubeContainer" class="brClubeContainer">
+            <form id="brClubeForm">
+
+                <label for="protocolo">Protocolo:</label>
+                <input type="text" id="protocolo" required><br>
+
+                <label for="dataHora">Data e Hora:</label>
+                <input type="datetime-local" id="dataHora" required><br>
+
+                <label for="placa">Placa:</label>
+                <input type="text" id="placa" required><br>
+
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" required><br>
+
+                <label for="cor">Cor:</label>
+                <input type="text" id="cor" required><br>
+
+                <label for="solicitante">Solicitante:</label>
+                <input type="text" id="solicitante" required><br>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" required><br>
+
+                <label for="observacaoFatorGerador">Observação Fator Gerador:</label>
+                <textarea id="observacaoFatorGerador" required></textarea><br>
+
+                <label for="chaveLocal">Chave Local:</label>
+                <input type="text" id="chaveLocal" required><br>
+
+                <label for="observacaoResposta">Observação Resposta:</label>
+                <textarea id="observacaoResposta" required></textarea><br>
+
+                <label for="veiculoFacilAcesso">Veículo de Fácil Acesso:</label>
+                <input type="text" id="veiculoFacilAcesso" required><br>
+
+                <label for="observacaoResposta2">Observação Resposta 2:</label>
+                <textarea id="observacaoResposta2" required></textarea><br>
+
+                <label for="servico">Serviço:</label>
+                <input type="text" id="servico" required><br>
+
+                <label for="enderecoOrigem">Endereço de Origem:</label>
+                <input type="text" id="enderecoOrigem" required><br>
+
+                <label for="referenciaOrigem">Referência de Origem:</label>
+                <input type="text" id="referenciaOrigem" required><br>
+
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" required><br>
+
+                <label for="referenciaDestino">Referência de Destino:</label>
+                <input type="text" id="referenciaDestino" required><br>
+
+
+                <button type="button" onclick="enviarFormulario()">Enviar</button>
+                <button type="button" onclick="copiarTexto()">Copiar Texto</button>
+
+                <br><br>
+            </form>
+        </div>
+    </div>
+
+    <div id="texto-container" class="texto-container">
+        <p id="texto"></p>
+    </div>
+
+    <script src="eventos.js"></script>
+
+</body>
+
+</html>
