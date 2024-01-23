@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BR Clube || Boas-vindas</title>
-    <link rel="stylesheet" href="../padrao.css">
-    <link rel="stylesheet" href="../style.css">
+    <title>BR Clube | Boas-vindas</title>
+    <link rel="stylesheet" href="boasVindas.css">
 </head>
 </head>
 
 <body>
 
-    <h1>MENSAGEM DE BOAS-VINDAS</h1>
+    <header>
+        <h1>MENSAGEM DE BOAS-VINDAS</h1>
+    </header>
 
-    <form id="brClubeForm">
-        <br>
-        <label for="nome">Nome do associado(a): </label>
-        <input type="text" id="nome" required><br>
+    <br>
 
-        <label for="placa">Placa: </label>
-        <input type="text" id="placa" required><br>
+    <div id="conteudoNoMeio">
+        <div id="brClubeContainer" class="brClubeContainer">
+            <form id="brClubeForm">
+                <label for="nome">Nome do associado(a): </label>
+                <input type="text" id="nome" required><br>
 
-        <label for="vencimentoBoleto">Vencimento do boleto (dia/mês): </label>
-        <input type="text" id="vencimentoBoleto" required><br>
+                <label for="placa">Placa: </label>
+                <input type="text" id="placa" required><br>
 
-        <label for="whatsapp">Whatsapp: </label>
-        <input type="text" id="whatsapp" required><br>
+                <label for="vencimentoBoleto">Vencimento do boleto (dia/mês): </label>
+                <input type="text" id="vencimentoBoleto" required><br>
 
-        <label for="endereco">Endereço: </label>
-        <input type="text" id="endereco" required><br>
+                <label for="whatsapp">Whatsapp: </label>
+                <input type="text" id="whatsapp" required><br>
 
-        <label for="cep">CEP: </label>
-        <input type="text" id="cep" required><br>
+                <label for="endereco">Endereço: </label>
+                <input type="text" id="endereco" required><br>
 
-        <label for="email">E-mail: </label>
-        <input type="email" id="email" required><br>
+                <label for="cep">CEP: </label>
+                <input type="text" id="cep" required><br>
 
-        <label for="sexo">Digite h se homem ou m para mulher: </label>
-        <input type="text" id="sexo" required><br>
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" required><br>
 
-        <button type="button" onclick="enviarFormulario()">Enviar</button>
-        <br><br>
-    </form>
+                <label for="sexo">Digite h se homem ou m para mulher: </label>
+                <input type="text" id="sexo" required><br>
 
-    <hr color="blue">
+                <button type="button" onclick="enviarFormulario()">Enviar</button>
+                <button type="button" onclick="copiarTexto()">Copiar Texto</button>
 
-    <p id="texto"></p>
+                <br><br>
+            </form>
+        </div>
+
+        <div id="texto-container" class="texto-container">
+            <p id="texto"></p>
+        </div>
+    </div>
 
     <script src="boasVindas.js"></script>
 

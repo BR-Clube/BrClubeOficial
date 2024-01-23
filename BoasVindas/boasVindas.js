@@ -29,9 +29,19 @@ function enviarFormulario() {
     informacoes += `Parabéns por você escolher a BR CLUBE!<br>`;
     informacoes += `#UmaNovaExperiência #OsMelhoresBenefícios<br><br>`;
     informacoes += `➡🙋CASO NÃO receba o boleto até 5 dias antes do vencimento favor entrar em contato conosco: <br><br>`;
-    informacoes += `NOSSO NÚMERO COMERCIAL:<br><br>☎ (62) 3434-2622<br><br>PARA ASSISTÊNCIA 24H:<br><br>Whastsapp: (62) 3434-2622`;
+    informacoes += `NOSSO NÚMERO COMERCIAL:<br><br>☎ (62) 3434-2622<br><br>PARA ASSISTÊNCIA 24H:<br><br>Whatsapp: (62) 3434-2622`;
 
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
     elementoTexto.innerHTML = `${saudacao}${informacoes}`;
+}
+
+function copiarTexto() {
+    const textoParaCopiar = document.getElementById("texto");
+    const textoSelecionado = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(textoParaCopiar);
+    textoSelecionado.removeAllRanges();
+    textoSelecionado.addRange(range);
+    document.execCommand("copy");
 }

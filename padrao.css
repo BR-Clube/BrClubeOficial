@@ -6,23 +6,6 @@ h1 {
     text-align: center;
 }
 
-form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
 button {
     background-color: #4CAF50;
     color: white;
