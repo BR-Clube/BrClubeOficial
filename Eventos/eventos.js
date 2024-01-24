@@ -22,7 +22,7 @@ function enviarFormulario() {
     let informacoes = '';
 
     informacoes = `Protocolo: ${protocolo}<br><br>`;
-    informacoes += `Data e Hora: ${dataHora}<br><br>`;
+    informacoes += `Data: ${formataDataEHorario(dataHora)}<br><br>`;
     informacoes += `Placa: ${placa}<br><br>`;
     informacoes += `Modelo: ${modelo}<br><br>`;
     informacoes += `Cor: ${cor}<br><br>`;
@@ -43,14 +43,4 @@ function enviarFormulario() {
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
     elementoTexto.innerHTML = `${informacoes}`;
-}
-
-function copiarTexto() {
-    const textoParaCopiar = document.getElementById("texto");
-    const textoSelecionado = window.getSelection();
-    const range = document.createRange();
-    range.selectNodeContents(textoParaCopiar);
-    textoSelecionado.removeAllRanges();
-    textoSelecionado.addRange(range);
-    document.execCommand("copy");
 }

@@ -34,19 +34,16 @@
         <div id="brClubeContainer" class="brClubeContainer">
             <form id="brClubeForm">
                 <label for="nome">Nome do associado(a): </label>
-                <input placeholder="" type="text" id="nome" required><br>
+                <input placeholder="Nome completo" type="text" id="nome" required><br>
                 
                 <label for="placa">Placa/Veiculo: </label>
-                <input placeholder="" type="text" id="placa" required><br>
+                <input placeholder="Placa e modelo do veículo" type="text" id="placa" required><br>
 
                 <label for="vencimentoBoleto">Mês do vencimento: </label>
-                <input placeholder="" type="text" id="mes" required><br>
+                <input placeholder="" type="month" id="mes" required><br>
 
                 <label for="whatsapp">Data de vencimento: </label>
-                <input placeholder="" type="text" id="data" required><br>
-
-                <label for="endereco">Ano: </label>
-                <input placeholder="" type="text" id="ano" required><br>
+                <input placeholder="" type="date" id="data" required><br>
 
                 <label for="cep">Valor total: R$</label>
                 <input placeholder="" type="text" id="dinheiroTotal" required><br>
@@ -77,5 +74,6 @@
     </div>
 
     <script src="cobranca.js"></script>
+    <script src="../index.js"></script>
 
 </body>

@@ -2,7 +2,7 @@ function enviarFormulario() {
     // Obtenha os valores dos campos do formulário
     const nome = document.getElementById('nome').value;
     const placa = document.getElementById('placa').value;
-    const vencimentoBoleto = document.getElementById('vencimentoBoleto').value;
+    const data = document.getElementById('data').value;
     const whatsapp = document.getElementById('whatsapp').value;
     const endereco = document.getElementById('endereco').value;
     const cep = document.getElementById('cep').value;
@@ -24,7 +24,7 @@ function enviarFormulario() {
 
     informacoes += `É muito importante que você confira todos os dados para que em caso de uma eventual ocorrência, possamos agilizar o processo e garantir a sua tranquilidade.<br><br>`;
     informacoes += `📍 Placa: ${placa}<br><br>`;
-    informacoes += `⚠ Vencimento dos seus boletos será todo dia: ${vencimentoBoleto}<br><br>`;
+    informacoes += `⚠ Vencimento dos seus boletos será todo dia: ${formataData(data)}<br><br>`;
     informacoes += `📭E SERÁ ENVIADO POR WHATSAPP: ${whatsapp}<br><br>`;
     informacoes += `Seu endereço é: ${endereco}<br><br>`;
     informacoes += `CEP: ${cep}<br><br>`;
@@ -37,14 +37,4 @@ function enviarFormulario() {
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
     elementoTexto.innerHTML = `${saudacao}${informacoes}`;
-}
-
-function copiarTexto() {
-    const textoParaCopiar = document.getElementById("texto");
-    const textoSelecionado = window.getSelection();
-    const range = document.createRange();
-    range.selectNodeContents(textoParaCopiar);
-    textoSelecionado.removeAllRanges();
-    textoSelecionado.addRange(range);
-    document.execCommand("copy");
 }
