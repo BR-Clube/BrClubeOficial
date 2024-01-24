@@ -45,9 +45,8 @@ input {
     width: 48%;
     margin: 0 auto;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     display: flex; /* Torna o contêiner de texto um contêiner flexível */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
 }
 
 #genero {
