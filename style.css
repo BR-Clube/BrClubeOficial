@@ -3,21 +3,16 @@
     margin: 0;
 }
 
-h1 {
-    background-color: blue;
-    font-size: 60px;
-    text-align: center;
-    color: white;
-}
-
 h2 {
 text-align: center;
-color: rgb(0, 0, 0);    
+color: rgb(0, 0, 0);
+font-size: 40px;  
 }
 
 h2:hover {
     color:#000096;
-    font-size: 25px;
+    font-size: 43px;
+    background-color: #f1f1f1;
 }
 
 
