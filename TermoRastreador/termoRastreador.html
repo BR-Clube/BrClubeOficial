@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Clube | Boas-vindas</title>
+    <link rel="stylesheet" href="termoRastreador.css">
+    <link rel="stylesheet" href="../Nav/nav.css">
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <!-- Adicione a imagem da logo -->
+        <img src="../Images/brclube2.png" alt="Logo da Empresa" class="logo">
+
+        <ul>
+            <li><a href="../index.html">MENU</a></li>
+            <li><a target="_blank" href="https://portal.sivisweb.com.br/loja/012/dashboard">COTAÇÕES</a></li>
+        </ul>
+    </nav>
+
+    <br>
+
+    <header>
+        <h1>TERMO DE RECEBIMENTO E RESPONSABILIDADE COM EQUIPAMENTO DE RASTREAMENTO</h1>
+    </header>
+
+    <br><br>
+
+    <div id="conteudoNoMeio">
+        <div id="brClubeContainer" class="brClubeContainer">
+            <form id="brClubeForm">
+
+                <div id="equipamento">
+                    <label for="equipamento">Equipamento 1:</label>
+                    <input placeholder="Número do EMEI" type="text" id="equipamento" name="equipamento" required><br>
+                </div>
+
+                <button type="button" onclick="adicionarEquipamento()">Adicionar Equipamento</button>
+
+                <br><br><br>
+
+                <div id="data">
+                    <label for="equipamento">Data:</label>
+                    <input type="date" id="data" name="data" required><br>
+                </div>
+                
+                <br><br>
+
+                <button type="button" onclick="enviarFormulario()">Enviar</button>
+
+                <br><br>
+
+                <button type="button" onclick="downloadPDF()">Download PDF</button>
+              
+            </form>
+        </div>
+
+        <div id="texto-container" class="texto-container">
+            <p id="texto"></p>
+        </div>
+    </div>
+
+    <script src="termoRastreador.js"></script>
+    <script src="../index.js"></script>
+    </form>
+
+</body>
+
+</html>
