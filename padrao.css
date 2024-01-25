@@ -1,10 +1,8 @@
 * {
-    padding: 0;
-    margin: 0;
     font-size: 20px;
 }
 
-header{
+header {
     background-color: #000056;
     text-align: center;
 }
@@ -36,7 +34,8 @@ input {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    width:45%; /* Ajuste a largura do formulário conforme necessário */
+    width: 45%;
+    /* Ajuste a largura do formulário conforme necessário */
     float: left;
     padding-left: 5px;
 }
@@ -46,7 +45,8 @@ input {
     margin: 0 auto;
     padding: 20px;
     text-align: left;
-    display: flex; /* Torna o contêiner de texto um contêiner flexível */
+    display: flex;
+    /* Torna o contêiner de texto um contêiner flexível */
 }
 
 #genero {
@@ -58,7 +58,8 @@ input {
     display: flex;
     align-items: center;
     margin-right: 10px;
-    margin-top: 5px; /* Ajuste a margem superior conforme necessário */
+    margin-top: 5px;
+    /* Ajuste a margem superior conforme necessário */
 }
 
 button {

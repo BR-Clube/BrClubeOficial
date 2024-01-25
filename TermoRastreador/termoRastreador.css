@@ -1,6 +1,4 @@
 * {
-    padding: 0;
-    margin: 0;
     font-size: 20px;
 }
 
@@ -69,9 +67,9 @@ b {
 }
 
 #buttonRed {
-    background-color: rgb(255, 139, 61);
+    background-color: rgb(255, 120, 31);
 }
 
-#buttonRed:hover{
+#buttonRed:hover {
     background-color: rgb(255, 102, 0);
 }

@@ -1,6 +1,7 @@
-* {
-    padding: 0;
+body {
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
 }
 
 h2 {
@@ -12,7 +13,15 @@ font-size: 40px;
 h2:hover {
     color:#000096;
     font-size: 43px;
-    background-color: #f1f1f1;
+    background-color: #ececec;
 }
 
 
+footer{
+    background-color: #001F3F; 
+    color: #ffffff; 
+    padding: 20px; 
+    text-align: center;
+    margin-top: auto;
+
+}
