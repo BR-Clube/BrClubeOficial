@@ -62,6 +62,20 @@ input {
     /* Ajuste a margem superior conforme necessário */
 }
 
+#chaveLocalContainer {
+    display: flex;
+    align-items: center;
+}
+
+
+#chaveLocalContainer label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 5px;
+    /* Ajuste a margem superior conforme necessário */
+}
+
 button {
     background-color: #4CAF50;
     color: white;
