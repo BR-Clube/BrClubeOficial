@@ -20,12 +20,16 @@ function adicionarEquipamento() {
 function downloadPDF() {
     const form = document.getElementById('texto');
 
+    form.innerHTML = '<div  text-align="center"><img src="../Images/brclube2.png" alt="Logo da Empresa" width="100px"></div><br><br>' + form.innerHTML;
+
+
     //Justificando PDF
     const containerDiv = document.createElement('div');
     containerDiv.style.textAlign = 'justify';
     containerDiv.innerHTML = form.innerHTML;
     form.innerHTML = '';
     form.appendChild(containerDiv);
+
 
     // Configuração das opções do html2pdf
     const options = {
@@ -34,14 +38,13 @@ function downloadPDF() {
         image: { type: 'jpeg', quality: 0.98 }, // Opções de imagem
         html2canvas: { scale: 2 }, // Configurações do html2canvas
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } // Configurações do jsPDF
-
-
     };
 
     html2pdf(form, options);
 }
 
 function enviarFormulario() {
+
     const form = document.getElementById('brClubeForm');
     const dadosFormulario = new FormData(form);
 
@@ -62,13 +65,17 @@ function enviarFormulario() {
     // Obtenha a data formatada considerando o fuso horário local
     const dataFormatada = dataObj.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
 
+    const nome = document.getElementById('nome').value;
+    const cpf = document.getElementById('cpf').value;
+    const rg = document.getElementById('rg').value;
+
     let informacoes = '';
 
-    informacoes += `<div style="text-align: center">TERMO DE RECEBIMENTO E RESPONSABILIDADE COM EQUIPAMENTO DE RASTREAMENTO</div><br><br><br><br>`;
-    informacoes += `Por meio deste documento, eu, _______________________________, com cadastro no CPF de nº ____________________, RG _______________, técnico de instalação de rastreadores, declaro que recebi os equipamentos correspondentes aos seguintes códigos:<br><br>`;
-    informacoes += `${equipamentos}<br>`;
+    informacoes += `<div style="text-align: center">TERMO DE RECEBIMENTO E RESPONSABILIDADE COM EQUIPAMENTO DE RASTREAMENTO</div><br><br>`;
+    informacoes += `Por meio deste documento, eu, ${nome}, com cadastro no CPF de nº ${cpf}, RG ${rg}, técnico de instalação de rastreadores, declaro que recebi os equipamentos correspondentes aos seguintes códigos:<br><br><br>`;
+    informacoes += `${equipamentos}<br><br>`;
     informacoes += `Me responsabilizo pelo seu bom uso e, caso o material não seja utilizado, asseguro devolvê-lo na sede da Associação BR CLUBE. Ao preencher assinar o presente termo, demonstro estar ciente das condições estabelecidas pela BR CLUBE. Declaro também estar ciente de que não há vínculo empregatício entre as partes, e que minha atuação se dará de forma independente, não caracterizando relação de emprego nos termos da legislação trabalhista vigente.<br><br><br><br>`;
-    informacoes += `<div style="text-align: right">Goiânia, ${dataFormatada}</div><br><br><br><br><br><br>`;
+    informacoes += `<div style="text-align: right">Goiânia, ${dataFormatada}</div><br><br><br><br>`;
     informacoes += `<div style="text-align: center">________________________________<br>Assinatura do(a) prestador(a)</div>`;
 
     // Atualize o conteúdo do elemento com id 'texto'
