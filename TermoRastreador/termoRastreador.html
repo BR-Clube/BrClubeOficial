@@ -32,16 +32,14 @@
         <div id="brClubeContainer" class="brClubeContainer">
             <form id="brClubeForm">
 
-                <label for="nome">Nome do instalador:</label>
-                <input placeholder="Nome completo" type="text" id="nome" name="nome" required><br>
-
-                <label for="cpf">CPF:</label>
-                <input placeholder="Número do CPF" type="text" id="cpf" name="cpf" required><br>
-
-                <label for="rg">RG:</label>
-                <input placeholder="Número do RG" type="text" id="rg" name="rg" required><br>
-
-                <br>
+                <div id="dadosPessoais">
+                    <label for="nome">Nome do instalador:</label>
+                    <input placeholder="Nome completo" type="text" id="nome" name="nome" required><br>
+                    <label for="cpf">CPF:</label>
+                    <input placeholder="Número do CPF" type="text" id="cpf" name="cpf" required><br>
+                    <label for="rg">RG:</label>
+                    <input placeholder="Número do RG" type="text" id="rg" name="rg" required><br>
+                </div>
 
                 <div id="equipamento">
                     <label for="equipamento">Equipamento 1:</label>
@@ -50,21 +48,19 @@
 
                 <button id="buttonRed" type="button" onclick="adicionarEquipamento()">Adicionar Equipamento</button>
 
-                <br><br>
+                <br>
 
                 <div id="data">
                     <label for="equipamento">Data:</label>
                     <input type="date" id="data" name="data" required><br>
                 </div>
-                
-                <br>
 
                 <button type="button" onclick="enviarFormulario()">Enviar</button>
 
                 <br><br>
 
                 <button type="button" onclick="downloadPDF()">Download PDF</button>
-              
+
             </form>
         </div>
 

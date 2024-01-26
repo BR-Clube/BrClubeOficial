@@ -1,4 +1,5 @@
 function adicionarEquipamento() {
+        
     const divEquipamento = document.getElementById('equipamento');
     const novoCampo = document.createElement('input');
     const numeroEquipamento = divEquipamento.getElementsByTagName('input').length + 1;
