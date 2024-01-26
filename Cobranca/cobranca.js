@@ -40,9 +40,9 @@ function enviarFormulario() {
     let informacoes = '';
 
     if (genero === 'm') {
-        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sr. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês de ${formataMes(mesAtual)}. <br><br> Vencimento: ${formataData(data)}  <br><br> Placa/Veículo: ${placa} <br><br>`;
+        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sr. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês ${formataMes(mesAtual)}. <br><br> Vencimento: ${formataData(data)}  <br><br> Placa/Veículo: ${placa} <br><br>`;
     } else if (genero === 'f') {
-        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sra. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês de ${formataMes(mesAtual)}. <br><br> Vencimento: ${formataData(data)}  <br><br> Placa/Veículo: ${placa} <br><br>`;
+        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sra. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês ${formataMes(mesAtual)}. <br><br> Vencimento: ${formataData(data)}  <br><br> Placa/Veículo: ${placa} <br><br>`;
     }
 
     informacoes += `TOTAL: R$ ${dinheiroTotal}<br><br>`;

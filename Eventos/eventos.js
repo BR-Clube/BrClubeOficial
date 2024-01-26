@@ -22,7 +22,7 @@ function enviarFormulario() {
     const fatorGerador = document.getElementById('fatorGerador').value;
     const observacaoFatorGerador = document.getElementById('observacaoFatorGerador').value;
     const observacaoResposta = document.getElementById('observacaoResposta').value;
-    const veiculoFacilAcesso = document.getElementById('veiculoFacilAcesso').value;
+    const veiculoFacilAcesso = document.getElementById('genero2').value;
     const observacaoResposta2 = document.getElementById('observacaoResposta2').value;
     const servico = document.getElementById('servico').value;
     const enderecoOrigem = document.getElementById('enderecoOrigem').value;
@@ -33,12 +33,20 @@ function enviarFormulario() {
     const generoElement = document.querySelector('input[name="genero"]:checked');
     const genero = generoElement ? generoElement.value : '';
 
+    const genero2Element = document.querySelector('input[name="genero2"]:checked');
+    const genero2 = genero2Element ? genero2Element.value : '';
+
     let informacoes = '';
     let saudacao = '';
+    let saudacao2 = '';
 
 
     if (genero === 'Sim'|| genero === 'Não') {
       saudacao = `Chave e documento no local: ${genero}<br><br>`;
+    }
+
+    if (genero === 'Sim'|| genero === 'Não') {
+      saudacao2 = `Veículo de fácil acesso: ${genero2}<br><br>`;
     }
 
     informacoes = `Protocolo: ${protocolo}<br><br>`;
@@ -52,7 +60,7 @@ function enviarFormulario() {
     informacoes += `Observação do fator gerador: ${observacaoFatorGerador}<br><br>`;
     informacoes += saudacao;
     informacoes += `Observação: ${observacaoResposta}<br><br>`;
-    informacoes += `Veículo de Fácil Acesso: ${veiculoFacilAcesso}<br><br>`;
+    informacoes += saudacao2;
     informacoes += `Observação Resposta 2: ${observacaoResposta2}<br><br>`;
     informacoes += `Serviço: ${servico}<br><br>`;
     informacoes += `Endereço de Origem: ${enderecoOrigem}<br><br>`;
