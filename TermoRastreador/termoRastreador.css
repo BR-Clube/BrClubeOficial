@@ -21,3 +21,24 @@ label {
 #texto{
     margin-right: 10px;
 }
+
+#buttonEquipamento{
+    background-color: rgb(255, 206, 70);
+}
+
+#buttonEquipamento:hover{
+    background-color: rgb(255, 187, 0);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0ad114;
+}
