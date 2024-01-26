@@ -1,3 +1,15 @@
+function formataDataEHorario(dataHora) {
+    const dataFormatada = new Date(dataHora);
+
+    const dia = dataFormatada.getDate().toString().padStart(2, '0');
+    const mes = (dataFormatada.getMonth() + 1).toString().padStart(2, '0');
+    const ano = dataFormatada.getFullYear();
+    const hora = dataFormatada.getHours().toString().padStart(2, '0');
+    const minuto = dataFormatada.getMinutes().toString().padStart(2, '0');
+
+    return `${dia}/${mes}/${ano} - Horário: ${hora}h:${minuto}`;
+}
+
 function enviarFormulario() {
     // Obtenha os valores dos campos do formulário
     const protocolo = document.getElementById('protocolo').value;
@@ -9,7 +21,6 @@ function enviarFormulario() {
     const telefone = document.getElementById('telefone').value;
     const fatorGerador = document.getElementById('fatorGerador').value;
     const observacaoFatorGerador = document.getElementById('observacaoFatorGerador').value;
-    const chaveLocal = document.getElementById('chaveLocal').value;
     const observacaoResposta = document.getElementById('observacaoResposta').value;
     const veiculoFacilAcesso = document.getElementById('veiculoFacilAcesso').value;
     const observacaoResposta2 = document.getElementById('observacaoResposta2').value;
@@ -19,7 +30,16 @@ function enviarFormulario() {
     const destino = document.getElementById('destino').value;
     const referenciaDestino = document.getElementById('referenciaDestino').value;
 
+    const generoElement = document.querySelector('input[name="genero"]:checked');
+    const genero = generoElement ? generoElement.value : '';
+
     let informacoes = '';
+    let saudacao = '';
+
+
+    if (genero === 'Sim'|| genero === 'Não') {
+      saudacao = `Chave e documento no local: ${genero}<br><br>`;
+    }
 
     informacoes = `Protocolo: ${protocolo}<br><br>`;
     informacoes += `Data: ${formataDataEHorario(dataHora)}<br><br>`;
@@ -29,9 +49,9 @@ function enviarFormulario() {
     informacoes += `Solicitante: ${solicitante}<br><br>`;
     informacoes += `Telefone: ${telefone}<br><br>`;
     informacoes += `Fator Gerador: ${fatorGerador}<br><br>`;
-    informacoes += `Observação Fator Gerador: ${observacaoFatorGerador}<br><br>`;
-    informacoes += `Chave Local: ${chaveLocal}<br><br>`;
-    informacoes += `Observação Resposta: ${observacaoResposta}<br><br>`;
+    informacoes += `Observação do fator gerador: ${observacaoFatorGerador}<br><br>`;
+    informacoes += saudacao;
+    informacoes += `Observação: ${observacaoResposta}<br><br>`;
     informacoes += `Veículo de Fácil Acesso: ${veiculoFacilAcesso}<br><br>`;
     informacoes += `Observação Resposta 2: ${observacaoResposta2}<br><br>`;
     informacoes += `Serviço: ${servico}<br><br>`;
@@ -39,6 +59,25 @@ function enviarFormulario() {
     informacoes += `Referência de Origem: ${referenciaOrigem}<br><br>`;
     informacoes += `Destino: ${destino}<br><br>`;
     informacoes += `Referência de Destino: ${referenciaDestino}<br><br>`;
+
+    console.log("Protocolo:", protocolo);
+    console.log("Data/Horário:", dataHora);
+    console.log("Placa:", placa);
+    console.log("Modelo:", modelo);
+    console.log("Cor:", cor);
+    console.log("Solicitante:", solicitante);
+    console.log("Telefone:", telefone);
+    console.log("Fator Gerador:", fatorGerador);
+    console.log("Observação do Fator Gerador:", observacaoFatorGerador);
+    console.log("Observação:", observacaoResposta);
+    console.log("Veículo de Fácil Acesso:", veiculoFacilAcesso);
+    console.log("Observação Resposta 2:", observacaoResposta2);
+    console.log("Serviço:", servico);
+    console.log("Endereço de Origem:", enderecoOrigem);
+    console.log("Referência de Origem:", referenciaOrigem);
+    console.log("Destino:", destino);
+    console.log("Referência de Destino:", referenciaDestino);
+    console.log("Chave e documento no local?", genero);
 
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");

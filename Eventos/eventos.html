@@ -22,13 +22,9 @@
         </ul>
     </nav>
 
-    <br>
-
     <header>
         <h1>EVENTOS</h1>
     </header>
-
-    <br><br>
 
     <div id="conteudoNoMeio">
         <div id="brClubeContainer" class="brClubeContainer">
@@ -53,17 +49,25 @@
                 <input placeholder="Nome completo do solicitante" type="text" id="solicitante" required><br>
 
                 <label for="telefone">Telefone:</label>
-                <input placeholder="(xx) xxxxx-xxxx" type="text" id="telefone" value="() - " required><br>
+                <input placeholder="(xx) xxxxx-xxxx" type="text" id="telefone" required><br>
 
                 <label for="fatorGerador">Fator Gerador:</label>
-                <input placeholder="" type="text" id="fatorGerador" required><br>
+                <input placeholder="Causa do evento" type="text" id="fatorGerador" required><br>
 
                 <label for="observacaoFatorGerador">Observação do Fator Gerador:</label>
-                <textarea placeholder="" id="observacaoFatorGerador" required></textarea><br>
+                <textarea placeholder="Observações adicionais..." id="observacaoFatorGerador" required></textarea><br>
 
-                <label for="chaveLocal">Chave e Documento estão no local?</label>
-                <input placeholder="" type="text" id="chaveLocal" required><br>
-
+                <label for="genero" class="genero">Chave e documento estão no local?</label>
+                <div id="genero">
+                    <label>
+                        <input type="radio" name="genero" value='Sim'> Sim
+                    </label>
+                
+                    <label>
+                        <input type="radio" name="genero" value='Não'> Não
+                    </label>
+                </div>
+                
                 <label for="observacaoResposta">Observação:</label>
                 <textarea placeholder="" id="observacaoResposta" required></textarea><br>
 
@@ -87,7 +91,6 @@
 
                 <label for="referenciaDestino">Referência de Destino:</label>
                 <input placeholder="" type="text" id="referenciaDestino" required><br>
-
 
                 <button type="button" onclick="enviarFormulario()">Enviar</button>
                 <button type="button" onclick="copiarTexto()">Copiar Texto</button>

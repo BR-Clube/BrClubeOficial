@@ -1,3 +1,15 @@
+function formataData(data) {
+    const [ano, mes, dia] = data.split('-');
+    const dataFormatada = new Date(parseInt(ano), parseInt(mes) - 1, parseInt(dia));
+
+    const diaFormatado = dataFormatada.getDate().toString().padStart(2, '0');
+    const mesFormatado = (dataFormatada.getMonth() + 1).toString().padStart(2, '0');
+    const anoFormatado = dataFormatada.getFullYear();
+
+    return `${diaFormatado}/${mesFormatado}/${anoFormatado}`;
+}
+
+
 function enviarFormulario() {
     // Obtenha os valores dos campos do formulário
     const nome = document.getElementById('nome').value;
