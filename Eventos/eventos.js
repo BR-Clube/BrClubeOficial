@@ -42,50 +42,31 @@ function enviarFormulario() {
 
 
     if (genero === 'Sim'|| genero === 'Não') {
-      saudacao = `Chave e documento no local: ${genero}<br><br>`;
+      saudacao = `<strong>Chave e documento no local:</strong> ${genero}<br><br>`;
     }
 
     if (genero === 'Sim'|| genero === 'Não') {
-      saudacao2 = `Veículo de fácil acesso: ${genero2}<br><br>`;
+      saudacao2 = `<strong>Veículo de fácil acesso:</strong> ${genero2}<br><br>`;
     }
 
-    informacoes = `Protocolo: ${protocolo}<br><br>`;
-    informacoes += `Data: ${formataDataEHorario(dataHora)}<br><br>`;
-    informacoes += `Placa: ${placa}<br><br>`;
-    informacoes += `Modelo: ${modelo}<br><br>`;
-    informacoes += `Cor: ${cor}<br><br>`;
-    informacoes += `Solicitante: ${solicitante}<br><br>`;
-    informacoes += `Telefone: ${telefone}<br><br>`;
-    informacoes += `Fator Gerador: ${fatorGerador}<br><br>`;
-    informacoes += `Observação do fator gerador: ${observacaoFatorGerador}<br><br>`;
+    informacoes = `<strong>Protocolo:</strong> ${protocolo}<br><br>`;
+    informacoes += `<strong>Data:</strong> ${formataDataEHorario(dataHora)}<br><br>`;
+    informacoes += `<strong>Placa:</strong> ${placa}<br><br>`;
+    informacoes += `<strong>Modelo:</strong> ${modelo}<br><br>`;
+    informacoes += `<strong>Cor:</strong> ${cor}<br><br>`;
+    informacoes += `<strong>Solicitante:</strong> ${solicitante}<br><br>`;
+    informacoes += `<strong>Telefone:</strong> ${telefone}<br><br>`;
+    informacoes += `<strong>Fator Gerador:</strong> ${fatorGerador}<br><br>`;
+    informacoes += `<strong>Observação do fator gerador:</strong> ${observacaoFatorGerador}<br><br>`;
     informacoes += saudacao;
-    informacoes += `Observação: ${observacaoResposta}<br><br>`;
+    informacoes += `<strong>Observação:</strong> ${observacaoResposta}<br><br>`;
     informacoes += saudacao2;
-    informacoes += `Observação Resposta 2: ${observacaoResposta2}<br><br>`;
-    informacoes += `Serviço: ${servico}<br><br>`;
-    informacoes += `Endereço de Origem: ${enderecoOrigem}<br><br>`;
-    informacoes += `Referência de Origem: ${referenciaOrigem}<br><br>`;
-    informacoes += `Destino: ${destino}<br><br>`;
-    informacoes += `Referência de Destino: ${referenciaDestino}<br><br>`;
-
-    console.log("Protocolo:", protocolo);
-    console.log("Data/Horário:", dataHora);
-    console.log("Placa:", placa);
-    console.log("Modelo:", modelo);
-    console.log("Cor:", cor);
-    console.log("Solicitante:", solicitante);
-    console.log("Telefone:", telefone);
-    console.log("Fator Gerador:", fatorGerador);
-    console.log("Observação do Fator Gerador:", observacaoFatorGerador);
-    console.log("Observação:", observacaoResposta);
-    console.log("Veículo de Fácil Acesso:", veiculoFacilAcesso);
-    console.log("Observação Resposta 2:", observacaoResposta2);
-    console.log("Serviço:", servico);
-    console.log("Endereço de Origem:", enderecoOrigem);
-    console.log("Referência de Origem:", referenciaOrigem);
-    console.log("Destino:", destino);
-    console.log("Referência de Destino:", referenciaDestino);
-    console.log("Chave e documento no local?", genero);
+    informacoes += `<strong>Observação:</strong> ${observacaoResposta2}<br><br>`;
+    informacoes += `<strong>Serviço:</strong> ${servico}<br><br>`;
+    informacoes += `<strong>Endereço de Origem:</strong> ${enderecoOrigem}<br><br>`;
+    informacoes += `<strong>Referência de Origem:</strong> ${referenciaOrigem}<br><br>`;
+    informacoes += `<strong>Destino:</strong> ${destino}<br><br>`;
+    informacoes += `<strong>Referência de Destino:</strong> ${referenciaDestino}<br><br>`;
 
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");

@@ -9,6 +9,25 @@ h1{
     font-size: 30px;
 }
 
+.brClubeContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 45%;
+    /* Ajuste a largura do formulário conforme necessário */
+    float: left;
+    padding-left: 5px;
+}
+
+.texto-container {
+    width: 48%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    /* Torna o contêiner de texto um contêiner flexível */
+}
+
 label {
     display: block;
     width: 170px; /* Ajuste de acordo com suas necessidades */

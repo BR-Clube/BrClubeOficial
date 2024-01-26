@@ -40,19 +40,19 @@ function enviarFormulario() {
     let informacoes = '';
 
     if (genero === 'm') {
-        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sr. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês ${formataMes(mesAtual)}. <br><br> Vencimento: ${formataData(data)}  <br><br> Placa/Veículo: ${placa} <br><br>`;
+        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sr. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês ${formataMes(mesAtual)}. <br><br> <strong>Vencimento:</strong> ${formataData(data)}  <br><br> <strong>Placa/Veículo:</strong> ${placa} <br><br>`;
     } else if (genero === 'f') {
-        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sra. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês ${formataMes(mesAtual)}. <br><br> Vencimento: ${formataData(data)}  <br><br> Placa/Veículo: ${placa} <br><br>`;
+        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sra. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês ${formataMes(mesAtual)}. <br><br> <strong>Vencimento:</strong> ${formataData(data)}  <br><br> <strong>Placa/Veículo:<strong> ${placa} <br><br>`;
     }
 
-    informacoes += `TOTAL: R$ ${dinheiroTotal}<br><br>`;
+    informacoes += `<strong>TOTAL: R$</strong> ${dinheiroTotal}<br><br>`;
     informacoes += `Neste caso, informamos que o pagamento AINDA poderá ser feito via PIX, sem ocorrência de juros por atraso.<br><br>`;
-    informacoes += `Nosso código pix é CNPJ: <br><br>`;
+    informacoes += `<strong>Nosso código pix é CNPJ:</strong> <br><br>`;
     informacoes += `40.410.992/0001-40 <br><br>`;
     informacoes += `Após o pagamento, compartilhe o comprovante por aqui, por gentileza, para informarmos a baixa no sistema.<br><br>`;
     informacoes += `Caso o pagamento já tenha sido realizado, por favor desconsiderar essa mensagem.<br><br>`;
     informacoes += `De já, externamos nossa gratidão!<br><br>`;
-    informacoes += `Equipe BrClube!`;
+    informacoes += `<strong>Equipe BrClube!<strong>`;
 
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
