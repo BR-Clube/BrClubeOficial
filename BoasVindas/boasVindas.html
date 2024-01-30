@@ -25,52 +25,52 @@
     <header>
         <h1>MENSAGEM DE BOAS-VINDAS</h1>
     </header>
-        <div id="brClubeContainer" class="brClubeContainer">
-            <form id="brClubeForm">
-                <label for="nome">Nome do associado(a): </label>
-                <input placeholder="Nome completo" type="text" id="nome" required><br>
+    <div id="brClubeContainer" class="brClubeContainer">
+        <form id="brClubeForm">
+            <label for="nome">Nome do associado(a): </label>
+            <input placeholder="Nome completo" type="text" id="nome" required><br>
 
-                <label for="placa">Placa: </label>
-                <input placeholder="Placa do veículo" type="text" id="placa" required><br>
+            <label for="placa">Placa: </label>
+            <input placeholder="Placa do veículo" type="text" id="placa" required><br>
 
-                <label for="vencimentoBoleto">Vencimento do boleto: </label>
-                <input type="date" id="data" required><br>
+            <label for="boleto">Dia de vencimento do boleto: </label>
+            <input type="text" id="boleto" placeholder="Dia do vencimento" required><br>
 
-                <label for="whatsapp">Whatsapp: </label>
-                <input placeholder="(XX) XXXXX-XXXX" type="tel" id="whatsapp" required><br>
+            <label for="telefone">Telefone:</label>
+            <input type="text" placeholder="Número de telefone" id="telefone" maxlength="15" oninput="formatarTelefone(this)">
 
-                <label for="endereco">Endereço: </label>
-                <input placeholder="Melhor endereço" type="text" id="endereco" required><br>
+            <label for="endereco">Endereço: </label>
+            <input placeholder="Melhor endereço" type="text" id="endereco" required><br>
 
-                <label for="cep">CEP: </label>
-                <input placeholder="00000-000" type="text" id="cep" required><br>
+            <label for="cep">CEP: </label>
+            <input placeholder="00000-000" type="text" id="cep" required><br>
 
-                <label for="email">E-mail: </label>
-                <input placeholder="seu@melhoremail.com" type="email" id="email" required><br>
+            <label for="email">E-mail: </label>
+            <input placeholder="seu@melhoremail.com" type="email" id="email" required><br>
 
-                <label for="genero" class="genero">Gênero:</label>
-                <div id="genero">
-                    <label>
-                        <input type="radio" name="genero" value="m"> Masculino
-                    </label>
+            <label for="genero" class="genero">Gênero:</label>
+            <div id="genero">
+                <label>
+                    <input type="radio" name="genero" value="m"> Masculino
+                </label>
 
-                    <label> 
-                        <input type="radio" name="genero" value="f"> Feminino
-                    </label>
-                </div>
+                <label>
+                    <input type="radio" name="genero" value="f"> Feminino
+                </label>
+            </div>
 
-                <br>
+            <br>
 
-                <button type="button" onclick="enviarFormulario()">Enviar</button>
-                <button type="button" onclick="copiarTexto()">Copiar Texto</button>
+            <button type="button" onclick="enviarFormulario()">Enviar</button>
+            <button type="button" onclick="copiarTexto()">Copiar Texto</button>
 
-                <br><br>
-            </form>
-        </div>
+            <br><br>
+        </form>
+    </div>
 
-        <div id="texto-container" class="texto-container">
-            <p id="texto"></p>
-        </div>
+    <div id="texto-container" class="texto-container">
+        <p id="texto"></p>
+    </div>
 
     <script src="boasVindas.js"></script>
     <script src="../index.js"></script>

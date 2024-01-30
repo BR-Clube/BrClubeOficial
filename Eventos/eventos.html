@@ -48,8 +48,9 @@
                 <label for="solicitante">Solicitante:</label>
                 <input placeholder="Nome completo do solicitante" type="text" id="solicitante" required><br>
 
+
                 <label for="telefone">Telefone:</label>
-                <input placeholder="(xx) xxxxx-xxxx" type="text" id="telefone" required><br>
+                <input type="text" placeholder="Número de telefone" id="telefone" maxlength="15" oninput="formatarTelefone(this)">
 
                 <label for="fatorGerador">Fator Gerador:</label>
                 <input placeholder="Causa do evento" type="text" id="fatorGerador" required><br>
@@ -62,12 +63,12 @@
                     <label>
                         <input type="radio" name="genero" value='Sim'> Sim
                     </label>
-                
+
                     <label>
                         <input type="radio" name="genero" value='Não'> Não
                     </label>
                 </div>
-                
+
                 <label for="observacaoResposta">Observação:</label>
                 <textarea placeholder="Observações adicionais..." id="observacaoResposta" required></textarea><br>
 
@@ -76,7 +77,7 @@
                     <label>
                         <input type="radio" name="genero2" value='Sim'> Sim
                     </label>
-                
+
                     <label>
                         <input type="radio" name="genero2" value='Não'> Não
                     </label>
@@ -99,6 +100,12 @@
 
                 <label for="referenciaDestino">Referência de Destino:</label>
                 <input placeholder="Ponto de referência" type="text" id="referenciaDestino" required><br>
+
+                <label for="km">Quilometragem: </label>
+                <input placeholder="Km rodado" type="text" id="km" required><br>
+
+                <label for="kmTotal">Quilometragem total: </label>
+                <input placeholder="Km total rodado" type="text" id="kmTotal" required><br>
 
                 <button type="button" onclick="enviarFormulario()">Enviar</button>
                 <button type="button" onclick="copiarTexto()">Copiar Texto</button>

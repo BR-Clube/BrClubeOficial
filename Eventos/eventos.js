@@ -22,13 +22,15 @@ function enviarFormulario() {
     const fatorGerador = document.getElementById('fatorGerador').value;
     const observacaoFatorGerador = document.getElementById('observacaoFatorGerador').value;
     const observacaoResposta = document.getElementById('observacaoResposta').value;
-    const veiculoFacilAcesso = document.getElementById('genero2').value;
     const observacaoResposta2 = document.getElementById('observacaoResposta2').value;
     const servico = document.getElementById('servico').value;
     const enderecoOrigem = document.getElementById('enderecoOrigem').value;
     const referenciaOrigem = document.getElementById('referenciaOrigem').value;
     const destino = document.getElementById('destino').value;
     const referenciaDestino = document.getElementById('referenciaDestino').value;
+    const km = document.getElementById('km').value;
+    const kmTotal = document.getElementById('kmTotal').value;
+
 
     const generoElement = document.querySelector('input[name="genero"]:checked');
     const genero = generoElement ? generoElement.value : '';
@@ -42,31 +44,34 @@ function enviarFormulario() {
 
 
     if (genero === 'Sim'|| genero === 'Não') {
-      saudacao = `<strong>Chave e documento no local:</strong> ${genero}<br><br>`;
+      saudacao = `<strong>*Chave e documento no local:*</strong> ${genero}<br><br>`;
     }
 
     if (genero === 'Sim'|| genero === 'Não') {
-      saudacao2 = `<strong>Veículo de fácil acesso:</strong> ${genero2}<br><br>`;
+      saudacao2 = `<strong>*Veículo de fácil acesso:*</strong> ${genero2}<br><br>`;
     }
 
-    informacoes = `<strong>Protocolo:</strong> ${protocolo}<br><br>`;
-    informacoes += `<strong>Data:</strong> ${formataDataEHorario(dataHora)}<br><br>`;
-    informacoes += `<strong>Placa:</strong> ${placa}<br><br>`;
-    informacoes += `<strong>Modelo:</strong> ${modelo}<br><br>`;
-    informacoes += `<strong>Cor:</strong> ${cor}<br><br>`;
-    informacoes += `<strong>Solicitante:</strong> ${solicitante}<br><br>`;
-    informacoes += `<strong>Telefone:</strong> ${telefone}<br><br>`;
-    informacoes += `<strong>Fator Gerador:</strong> ${fatorGerador}<br><br>`;
-    informacoes += `<strong>Observação do fator gerador:</strong> ${observacaoFatorGerador}<br><br>`;
+    informacoes = `<strong>*Protocolo:*</strong> ${protocolo}<br><br>`;
+    informacoes += `<strong>*Data:*</strong> ${formataDataEHorario(dataHora)}<br><br>`;
+    informacoes += `<strong>*Placa:*</strong> ${placa}<br><br>`;
+    informacoes += `<strong>*Modelo:*</strong> ${modelo}<br><br>`;
+    informacoes += `<strong>*Cor:*</strong> ${cor}<br><br>`;
+    informacoes += `<strong>*Solicitante:*</strong> ${solicitante}<br><br>`;
+    informacoes += `<strong>*Telefone:*</strong> ${telefone}<br><br>`;
+    informacoes += `<strong>*Fator Gerador:*</strong> ${fatorGerador}<br><br>`;
+    informacoes += `<strong>*Observação do fator gerador:*</strong> ${observacaoFatorGerador}<br><br>`;
     informacoes += saudacao;
-    informacoes += `<strong>Observação:</strong> ${observacaoResposta}<br><br>`;
+    informacoes += `<strong>*Observação:*</strong> ${observacaoResposta}<br><br>`;
     informacoes += saudacao2;
-    informacoes += `<strong>Observação:</strong> ${observacaoResposta2}<br><br>`;
-    informacoes += `<strong>Serviço:</strong> ${servico}<br><br>`;
-    informacoes += `<strong>Endereço de Origem:</strong> ${enderecoOrigem}<br><br>`;
-    informacoes += `<strong>Referência de Origem:</strong> ${referenciaOrigem}<br><br>`;
-    informacoes += `<strong>Destino:</strong> ${destino}<br><br>`;
-    informacoes += `<strong>Referência de Destino:</strong> ${referenciaDestino}<br><br>`;
+    informacoes += `<strong>*Observação:*</strong> ${observacaoResposta2}<br><br>`;
+    informacoes += `<strong>*Serviço:*</strong> ${servico}<br><br>`;
+    informacoes += `<strong>*Endereço de Origem:*</strong> ${enderecoOrigem}<br><br>`;
+    informacoes += `<strong>*Referência de Origem:*</strong> ${referenciaOrigem}<br><br>`;
+    informacoes += `<strong>*Destino:*</strong> ${destino}<br><br>`;
+    informacoes += `<strong>*Referência de Destino:*</strong> ${referenciaDestino}<br><br>`;
+    informacoes += `<strong>*Quilometragem (km):*</strong> ${km} km<br><br>`;
+    informacoes += `<strong>*Quilometragem total (km):*</strong> ${kmTotal} km<br><br>`;
+    informacoes += `<strong>*RESPONSÁVEL PELO PAGAMENTO:</strong>* ASSOCIAÇÃO BR CLUBE DE BENEFíCIOS`;
 
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
