@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BR Clube | Rastreador</title>
-    <link rel="stylesheet" href="termoRastreador.css">
+    <link rel="stylesheet" href="../TermoRastreador/termoRastreador.css">
     <link rel="stylesheet" href="../Nav/nav.css">
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
@@ -25,7 +25,7 @@
     </nav>
 
     <header>
-        <h1>TERMO DE RECEBIMENTO E RESPONSABILIDADE COM EQUIPAMENTO DE RASTREAMENTO</h1>
+        <h1>TERMO DE QUITAÇÃO</h1>
     </header>
 
     <div id="conteudoNoMeio">
@@ -33,32 +33,37 @@
             <form id="brClubeForm">
 
                 <div id="dadosPessoais">
-                    <label for="nome">Nome do instalador:</label>
+                    <label for="nome">Responsável do veículo:</label>
                     <input placeholder="Nome completo" type="text" id="nome" name="nome" required>
-                    <label for="cpf">CPF:</label>
-                    <input placeholder="Número do CPF" type="text" id="cpf" name="cpf" required>
-                    <label for="rg">RG:</label>
-                    <input placeholder="Número do RG" type="text" id="rg" name="rg" required>
+                    <label for="cpf">CPF/CNPJ:</label>
+                    <input placeholder="Número do CPF ou CNPJ" type="text" id="cpf" name="cpf" required>
+                    <label for="veiculo">Veículo:</label>
+                    <input placeholder="Modelo do veículo" type="text" id="veiculo" name="veiculo" required>
+                    <label for="ano">Ano:</label>
+                    <input placeholder="Ano do veículo" type="number" id="ano" name="ano" required>
+                    <label for="placa">Placa:</label>
+                    <input placeholder="Placa do veículo" type="text" id="placa" name="placa" required>
                 </div>
-
-                <div id="equipamento">
-                    <label for="equipamento">Equipamento 1:</label>
-                    <input placeholder="Número do EMEI" type="text" id="equipamento" name="equipamento" required>
-                </div>
-
-                <button id="buttonEquipamento" type="button" onclick="adicionarEquipamento()">Adicionar equipamento</button>
 
                 <div id="data">
-                    <label for="equipamento">Data:</label>
+                    <label for="data">Data de início dos reparos:</label>
                     <input type="date" id="data" name="data" required><br>
+                </div>
+
+                <div id="data2">
+                    <label for="data2">Data de conclusão dos reparos:</label>
+                    <input type="date" id="data2" name="data2" required><br>
+                </div>
+
+                <div id="data3">
+                    <label for="data3">Data de hoje:</label>
+                    <input type="date" id="data3" name="data3" required><br>
                 </div>
 
                 <br>
 
                 <button type="button" onclick="enviarFormulario()">Enviar</button>
                 <button type="button" onclick="downloadPDF()">Download PDF</button>
-
-                <br><br>
 
                 <p><strong>ATENÇÃO:</strong><em> Quaisquer problemas com PDF, atualizar a página. <img src="../Images/atualizar.png" width="3.8%" alt="Logo: Atualizar página"></em></p> 
 
@@ -70,7 +75,7 @@
         </div>
     </div>
 
-    <script src="termoRastreador.js"></script>
+    <script src="termoQuitacao.js"></script>
     <script src="../index.js"></script>
     </form>
 
