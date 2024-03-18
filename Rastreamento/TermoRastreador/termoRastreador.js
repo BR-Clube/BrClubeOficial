@@ -64,13 +64,13 @@ function enviarFormulario() {
     });
 
     // Obtenha o valor do campo de data
-    const data = dadosFormulario.get('data1');
+    let data = dadosFormulario.get('data1');
 
     // Crie um objeto de data com o valor do campo
-    const dataObj = new Date(data);
+    let dataObj = new Date(data);
 
     // Obtenha a data formatada considerando o fuso horário local
-    const dataFormatada = dataObj.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
+    let dataFormatada = dataObj.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
 
     const nome = document.getElementById('nome').value;
     const cpf = document.getElementById('cpf').value;
@@ -85,8 +85,8 @@ function enviarFormulario() {
     informacoes += `${equipamentos}<br>`;
     informacoes += `Me responsabilizo pelo seu bom uso e, caso o material não seja utilizado, asseguro devolvê-lo na sede da Associação BR CLUBE. Ao preencher assinar o presente termo, demonstro estar ciente das condições estabelecidas pela BR CLUBE. Declaro também estar ciente de que não há vínculo empregatício entre as partes, e que minha atuação se dará de forma independente, não caracterizando relação de emprego nos termos da legislação trabalhista vigente.<br><br><br><br>`;
     informacoes += `<div style="text-align: center">${teste}</div>`;
-    informacoes += `<div style="text-align: center"><p>Assinatura do(a) prestador(a)</p></div>`;
-    informacoes += `<div style="text-align: right">Goiânia, ${dataFormatada}</div><br><br>`;
+    informacoes += `<div style="text-align: center">Assinatura do(a) prestador(a)</div>`;
+    informacoes += `<div style="text-align: right">Goiânia, ${dataFormatada}</div>`;
     
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
