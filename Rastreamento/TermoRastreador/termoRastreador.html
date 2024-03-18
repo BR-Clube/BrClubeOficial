@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BR Clube | Rastreador</title>
     <link rel="stylesheet" href="termoRastreador.css">
-    <link rel="stylesheet" href="../Nav/nav.css">
+    <link rel="stylesheet" href="/Nav/nav.css">
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
@@ -16,10 +16,10 @@
 
     <nav>
         <!-- Adicione a imagem da logo -->
-        <img src="../Images/brclube2.png" alt="Logo da Empresa" class="logo">
+        <img src="/Images/brclube2.png" alt="Logo da Empresa" class="logo">
 
         <ul>
-            <li><a href="../index.html">MENU</a></li>
+            <li><a href="/index.html">MENU</a></li>
             <li><a target="_blank" href="https://portal.sivisweb.com.br/loja/012/dashboard">COTAÇÕES</a></li>
         </ul>
     </nav>
@@ -41,26 +41,26 @@
                     <input placeholder="Número do RG" type="text" id="rg" name="rg" required>
                 </div>
 
-                <div id="equipamento">
+                <div id="equipamento1">
                     <label for="equipamento">Equipamento 1:</label>
                     <input placeholder="Número do EMEI" type="text" id="equipamento" name="equipamento" required>
                 </div>
 
-                <button id="buttonEquipamento" type="button" onclick="adicionarEquipamento()">Adicionar equipamento</button>
+                <button id="buttonEquipamento" type="button">Adicionar equipamento</button>
 
                 <div id="data">
-                    <label for="equipamento">Data:</label>
-                    <input type="date" id="data" name="data" required><br>
+                    <label for="data1">Data:</label>
+                    <input type="date" id="data1" name="data1" required><br>
                 </div>
 
                 <br>
 
-                <button type="button" onclick="enviarFormulario()">Enviar</button>
-                <button type="button" onclick="downloadPDF()">Download PDF</button>
+                <button id="buttonEnviar" type="button">Enviar</button>
+                <button id="buttonDownloadPDF" type="button">Download PDF</button>
 
                 <br><br>
 
-                <p><strong>ATENÇÃO:</strong><em> Quaisquer problemas com PDF, atualizar a página. <img src="../Images/atualizar.png" width="3.8%" alt="Logo: Atualizar página"></em></p> 
+                <p><strong>ATENÇÃO:</strong><em> Quaisquer problemas com PDF, atualizar a página. <img src="/Images/atualizar.png" width="3.8%" alt="Logo: Atualizar página"></em></p> 
 
             </form>
         </div>
@@ -71,7 +71,7 @@
     </div>
 
     <script src="termoRastreador.js"></script>
-    <script src="../index.js"></script>
+    <script src="/index.js"></script>
     </form>
 
 </body>

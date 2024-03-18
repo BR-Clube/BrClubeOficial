@@ -7,11 +7,11 @@ body {
 h2 {
 text-align: center;
 color: rgb(0, 0, 0);
-font-size: 40px;  
+font-size: 30px;  
 }
 
 h2:hover {
     color:#000096;
-    font-size: 39.7px;
+    font-size: 29px;
     background-color: #ececec;
 }
