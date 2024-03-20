@@ -26,17 +26,6 @@ function downloadPDF() {
     setTimeout(() => {
         const form = document.getElementById('texto');
 
-        // Crie um div para a imagem e adicione-a ao início do formulário
-        const logoDiv = document.createElement('div');
-        logoDiv.style.textAlign = 'left'; // Ajuste o alinhamento conforme necessário
-        const logoImg = document.createElement('img');
-        logoImg.src = '/images/brclube2.png';
-        logoImg.alt = 'Logo da Empresa';
-        logoImg.style.width = 'auto'; // Defina a largura da imagem como "auto" para manter suas proporções originais
-        logoImg.style.maxWidth = '5%'; // Define a largura máxima da imagem para "100%" para evitar que ela ultrapasse o espaço disponível
-        logoDiv.appendChild(logoImg);
-        form.insertBefore(logoDiv, form.firstChild);
-
         //Justifique o conteúdo para o PDF
         const containerDiv = document.createElement('div');
         containerDiv.style.textAlign = 'justify';
@@ -88,7 +77,7 @@ function enviarFormulario() {
 
     const assinatura = `______________________________`;
 
-    informacoes += `<br><div style="text-align: center"><strong>TERMO DE RECEBIMENTO E RESPONSABILIDADE COM EQUIPAMENTO DE RASTREAMENTO</strong></div><br><br>`;
+    informacoes += `<div style="text-align: center"><strong>TERMO DE RECEBIMENTO E RESPONSABILIDADE COM EQUIPAMENTO DE RASTREAMENTO</strong></div><br><br>`;
     informacoes += `Por meio deste documento, eu, ${nome}, com cadastro no CPF de nº ${cpf}, RG ${rg}, técnico de instalação de rastreadores, declaro que recebi os equipamentos correspondentes aos seguintes códigos:<br><br>`;
     informacoes += `${equipamentos}<br>`;
     informacoes += `Me responsabilizo pelo seu bom uso e, caso o material não seja utilizado, asseguro devolvê-lo na sede da Associação BR CLUBE. Ao preencher assinar o presente termo, demonstro estar ciente das condições estabelecidas pela BR CLUBE. Declaro também estar ciente de que não há vínculo empregatício entre as partes, e que minha atuação se dará de forma independente, não caracterizando relação de emprego nos termos da legislação trabalhista vigente.<br><br><br>`;
