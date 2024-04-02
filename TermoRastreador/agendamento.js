@@ -64,6 +64,7 @@ function enviarFormulario() {
     const telefone = document.getElementById('telefone').value;
     const placa = document.getElementById('placa').value;
     const veiculo = document.getElementById('veiculo').value;
+    const cor = document.getElementById('cor').value;
     const ano = document.getElementById('ano').value;
     const renavam = document.getElementById('renavam').value;
     const chassi = document.getElementById('chassi').value;
@@ -81,6 +82,7 @@ function enviarFormulario() {
     informacoes += `<strong>*Gênero: *</strong> ${genero}<br><br>`;
     informacoes += `<strong>*Placa:*</strong> ${placa}<br><br>`;
     informacoes += `<strong>*Modelo:*</strong> ${veiculo}<br><br>`;
+    informacoes += `<strong>*Modelo:*</strong> ${cor}<br><br>`;
     informacoes += `<strong>*Ano:*</strong> ${ano}<br><br>`;
     informacoes += `<strong>*Renavam:*</strong> ${renavam}<br><br>`;
     informacoes += `<strong>*Chassi:*</strong> ${chassi}<br><br>`;
