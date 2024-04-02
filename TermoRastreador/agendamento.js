@@ -38,6 +38,9 @@ function downloadPDF() {
 
 function enviarFormulario() {
 
+     // Obtenha o formulário pelo ID
+     const form = document.getElementById('brClubeForm');
+
      // Obtenha o valor do campo de radio de gênero
     const generoElement = document.querySelector('input[name="genero"]:checked');
     const genero = generoElement ? generoElement.value : '';
