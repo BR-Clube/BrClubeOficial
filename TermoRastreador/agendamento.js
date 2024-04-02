@@ -82,7 +82,7 @@ function enviarFormulario() {
     informacoes += `<strong>*Gênero: *</strong> ${genero}<br><br>`;
     informacoes += `<strong>*Placa:*</strong> ${placa}<br><br>`;
     informacoes += `<strong>*Modelo:*</strong> ${veiculo}<br><br>`;
-    informacoes += `<strong>*Modelo:*</strong> ${cor}<br><br>`;
+    informacoes += `<strong>*Cor:*</strong> ${cor}<br><br>`;
     informacoes += `<strong>*Ano:*</strong> ${ano}<br><br>`;
     informacoes += `<strong>*Renavam:*</strong> ${renavam}<br><br>`;
     informacoes += `<strong>*Chassi:*</strong> ${chassi}<br><br>`;
