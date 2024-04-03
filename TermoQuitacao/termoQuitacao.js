@@ -1,7 +1,7 @@
 function downloadPDF() {
     const form = document.getElementById('texto');
 
-    form.innerHTML = '<div  text-align="center"><img src="../Images/brclube2.png" alt="Logo da Empresa" width="100px"></div><br><br>' + form.innerHTML;
+    form.innerHTML = '<div  text-align="center"><img src="../Images/brclube2.png" alt="Logo da Empresa" width="80px"></div><br><br>' + form.innerHTML;
 
 
     //Justificando PDF
