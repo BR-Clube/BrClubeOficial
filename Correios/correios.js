@@ -6,14 +6,22 @@ function enviarFormulario() {
 
     let informacoes = '';
 
-    informacoes += `<strong>*Destinatário:*</strong> ${destinatario} <br><br>`;
-    informacoes += `<strong>*Endereço:* </strong> ${endereco}<br><br>`;
-    informacoes += `<strong>*CEP:*</strong> ${cep}<br><br>`;
+    informacoes += `<div style="border: 1px solid black; padding: 10px;">`;
+    informacoes += `<img src="../Images/brclube2.png" alt="Logo Destinatário" style="width: 50px; height: auto;"><br>`;
+    informacoes += `<strong>*Destinatário:*</strong> ${destinatario}<br>`;
+    informacoes += `<strong>*Endereço:* </strong> ${endereco}<br>`;
+    informacoes += `<strong>*CEP:*</strong> ${cep}<br>`;
+    informacoes += `</div>`;
 
-    informacoes += `<br><br><br><strong>*Remetente:*</strong> ASSOCIAÇÃO BR CLUBE DE BENEFÍCIOS<br><br>`;
-    informacoes += `<strong>*Endereço:*</strong> Av. Dep. Jamel Cecílio, 2496 - Jardim Goiás, Goiânia - GO SALA 141-A<br><br>`;
-    informacoes += `<strong>*CEP:*</strong> 74810-100<br><br>`;
-    informacoes += `<strong>*Telefone:*</strong> (62) 3434-2622<br><br>`;
+    informacoes += `<br>`; 
+
+    informacoes += `<div style="border: 1px solid black; padding: 10px;">`;
+    informacoes += `<img src="../Images/brclube2.png" alt="Logo Destinatário" style="width: 50px; height: auto;"><br>`;
+    informacoes += `<strong>*Remetente:*</strong> ASSOCIAÇÃO BR CLUBE DE BENEFÍCIOS<br>`;
+    informacoes += `<strong>*Endereço:*</strong> Av. Dep. Jamel Cecílio, 2496 - Jardim Goiás, Goiânia - GO SALA 141-A<br>`;
+    informacoes += `<strong>*CEP:*</strong> 74810-100<br>`;
+    informacoes += `<strong>*Telefone:*</strong> (62) 3434-2622<br>`;
+    informacoes += `</div>`;
 
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
@@ -29,6 +37,13 @@ function downloadPDF() {
     // Aguarde um curto período de tempo para garantir que o conteúdo seja atualizado
     setTimeout(() => {
         const form = document.getElementById('texto');
+
+        //Justifique o conteúdo para o PDF
+        const containerDiv = document.createElement('div');
+        containerDiv.style.textAlign = 'left';
+        containerDiv.innerHTML = form.innerHTML;
+        form.innerHTML = '';
+        form.appendChild(containerDiv);
 
         // Configuração das opções do html2pdf
         const options = {
