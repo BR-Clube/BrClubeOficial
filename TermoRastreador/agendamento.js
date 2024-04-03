@@ -13,7 +13,7 @@ function formataDataEHorario(dataHora) {
 function downloadPDF() {
     const form = document.getElementById('texto');
 
-    form.innerHTML = '<div  text-align="center"><img src="/Images/brclube2.png" alt="Logo da Empresa" width="100px"></div><br><br>' + form.innerHTML;
+    form.innerHTML = '<div  text-align="center"><img src="../Images/brclube2.png" alt="Logo da Empresa" width="100px"></div><br><br>' + form.innerHTML;
 
 
     //Justificando PDF
@@ -29,7 +29,7 @@ function downloadPDF() {
         margin: 20, // Margens em pixels
         filename: 'termo_rastreamento.pdf', // Nome do arquivo PDF
         image: { type: 'jpeg', quality: 0.98 }, // Opções de imagem
-        html2canvas: { scale: 1 }, // Configurações do html2canvas
+        html2canvas: { scale: 2 }, // Configurações do html2canvas
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } // Configurações do jsPDF
     };
 
