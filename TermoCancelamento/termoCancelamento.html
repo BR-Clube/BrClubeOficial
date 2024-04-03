@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Clube | Cancelamento</title>
+    <link rel="stylesheet" href="../TermoRastreador/termoRastreador.css">
+    <link rel="stylesheet" href="../Nav/nav.css">
+</head>
+
+<body>
+
+    <nav>
+        <!-- Adicione a imagem da logo -->
+        <img src="../Images/brclube2.png" alt="Logo da Empresa" class="logo">
+
+        <ul>
+            <li><a href="../index.html">MENU</a></li>
+            <li><a target="_blank" href="https://portal.sivisweb.com.br/loja/012/dashboard">COTAÇÕES</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>TERMO DE CANCELAMENTO</h1>
+    </header>
+
+    <div id="conteudoNoMeio">
+        <div id="brClubeContainer" class="brClubeContainer">
+            <form id="brClubeForm">
+
+                <div id="dadosPessoais">
+
+                    <label for="placa">Placa:</label>
+                    <input placeholder="Placa do veículo" type="text" id="placa" name="placa" required>
+
+                    <label for="veiculo">Veículo:</label>
+                    <input placeholder="Modelo e marca do veículo" type="text" id="veiculo" name="veiculo" required>
+
+                    <label for="cor">Cor:</label>
+                    <input placeholder="Cor do veículo" type="text" id="cor" name="cor" required>
+
+                    <label for="ano">Ano:</label>
+                    <input placeholder="Ano do veículo" type="number" id="ano" name="ano" required>
+
+                    <label for="renavam">RENAVAM:</label>
+                    <input placeholder="Código do RENAVAM" type="number" id="renavam" name="renavam" required>
+
+                    <label for="chassi">Chassi:</label>
+                    <input placeholder="Código do Chassi" type="text" id="chassi" name="chassi" required>
+
+                    <label for="emei">N.º do EMEI:</label>
+                    <input placeholder="Número do EMEI" type="number" id="emei" name="emei" required>
+
+                    <label for="endereco">Endereço:</label>
+                    <input placeholder="Rua, bairro, número" type="text" id="endereco" required><br>
+
+                    <label for="dataHora">Data/Horário:</label>
+                    <input type="datetime-local" id="dataHora" required><br>
+
+                </div>
+
+                <br>
+
+                <button type="button" onclick="enviarFormulario()">Enviar</button>
+                <button type="button" onclick="copiarTexto()">Copiar Texto</button>
+                <button type="button" onclick="downloadPDF()">Download PDF</button>
+
+            </form>
+        </div>
+
+        <div id="texto-container" class="texto-container">
+            <p id="texto"></p>
+        </div>
+    </div>
+
+     
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="agendamento.js"></script>
+    <script src="../index.js"></script>
+    </form>
+
+</body>
+
+</html>
