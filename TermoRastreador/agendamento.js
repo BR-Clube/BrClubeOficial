@@ -28,7 +28,7 @@ function downloadPDF() {
     const options = {
         margin: 20, // Margens em pixels
         filename: 'termo_rastreamento.pdf', // Nome do arquivo PDF
-        image: { type: 'jpeg', quality: 0.98 }, // Opções de imagem
+        image: { type: 'jpeg', quality: 1 }, // Opções de imagem
         html2canvas: { scale: 2 }, // Configurações do html2canvas
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } // Configurações do jsPDF
     };
