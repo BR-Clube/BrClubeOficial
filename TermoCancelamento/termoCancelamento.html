@@ -31,17 +31,32 @@
 
                 <div id="dadosPessoais">
 
+                    <label for="itens">Tipo do veiculo:</label>
+                    <select id="itens" name="itens">
+                      <option value="Carro">Carro</option>
+                      <option value="Moto">Moto</option>
+                      <option value="Caminhão">Caminhão</option>
+                    </select>
+
+                    <br><br> 
+
                     <label for="placa">Placa:</label>
                     <input placeholder="Placa do veículo" type="text" id="placa" name="placa" required>
 
-                    <label for="veiculo">Veículo:</label>
-                    <input placeholder="Modelo e marca do veículo" type="text" id="veiculo" name="veiculo" required>
+                    <label for="marca">Marca:</label>
+                    <input placeholder="Marca do veículo" type="text" id="marca" name="marca" required>
+
+                    <label for="modelo">Modelo:</label>
+                    <input placeholder="Modelo do veículo" type="text" id="modelo" name="modelo" required>
 
                     <label for="cor">Cor:</label>
                     <input placeholder="Cor do veículo" type="text" id="cor" name="cor" required>
 
-                    <label for="ano">Ano:</label>
+                    <label for="ano">Ano modelo:</label>
                     <input placeholder="Ano do veículo" type="number" id="ano" name="ano" required>
+
+                    <label for="anoF">Ano de fabricação:</label>
+                    <input placeholder="Ano de fabricação" type="number" id="anoF" name="anoF" required>
 
                     <label for="renavam">RENAVAM:</label>
                     <input placeholder="Código do RENAVAM" type="number" id="renavam" name="renavam" required>
@@ -49,22 +64,19 @@
                     <label for="chassi">Chassi:</label>
                     <input placeholder="Código do Chassi" type="text" id="chassi" name="chassi" required>
 
-                    <label for="emei">N.º do EMEI:</label>
-                    <input placeholder="Número do EMEI" type="number" id="emei" name="emei" required>
+                    <label for="data2">Data de cancelamento:</label>
+                    <input type="date" id="data2" required><br>
 
-                    <label for="endereco">Endereço:</label>
-                    <input placeholder="Rua, bairro, número" type="text" id="endereco" required><br>
-
-                    <label for="dataHora">Data/Horário:</label>
-                    <input type="datetime-local" id="dataHora" required><br>
+                    <label for="data">Data de hoje:</label>
+                    <input type="date" id="data" required><br>
 
                 </div>
-
-                <br>
 
                 <button type="button" onclick="enviarFormulario()">Enviar</button>
                 <button type="button" onclick="copiarTexto()">Copiar Texto</button>
                 <button type="button" onclick="downloadPDF()">Download PDF</button>
+
+                <br><br>
 
             </form>
         </div>
@@ -77,7 +89,7 @@
      
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="agendamento.js"></script>
+    <script src="termoCancelamento.js"></script>
     <script src="../index.js"></script>
     </form>
 
