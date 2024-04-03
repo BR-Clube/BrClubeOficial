@@ -3,24 +3,26 @@ function enviarFormulario() {
     const destinatario = document.getElementById('destinatario').value;
     const endereco = document.getElementById('endereco').value;
     const cep = document.getElementById('cep').value;
+    const referencia = document.getElementById('referencia').value;
 
     let informacoes = '';
 
     informacoes += `<div style="border: 1px solid black; padding: 10px;">`;
     informacoes += `<img src="../Images/brclube2.png" alt="Logo Destinatário" style="width: 50px; height: auto;"><br>`;
-    informacoes += `<strong>*Destinatário:*</strong> ${destinatario}<br>`;
-    informacoes += `<strong>*Endereço:* </strong> ${endereco}<br>`;
-    informacoes += `<strong>*CEP:*</strong> ${cep}<br>`;
+    informacoes += `<strong>Destinatário:</strong> ${destinatario}<br>`;
+    informacoes += `<strong>Endereço: </strong> ${endereco}<br>`;
+    informacoes += `<strong>CEP:</strong> ${cep}<br>`;
+    informacoes += `<strong>Ponto de referência:</strong> ${referencia}<br>`;
     informacoes += `</div>`;
 
     informacoes += `<br>`; 
 
     informacoes += `<div style="border: 1px solid black; padding: 10px;">`;
     informacoes += `<img src="../Images/brclube2.png" alt="Logo Destinatário" style="width: 50px; height: auto;"><br>`;
-    informacoes += `<strong>*Remetente:*</strong> ASSOCIAÇÃO BR CLUBE DE BENEFÍCIOS<br>`;
-    informacoes += `<strong>*Endereço:*</strong> Av. Dep. Jamel Cecílio, 2496 - Jardim Goiás, Goiânia - GO SALA 141-A<br>`;
-    informacoes += `<strong>*CEP:*</strong> 74810-100<br>`;
-    informacoes += `<strong>*Telefone:*</strong> (62) 3434-2622<br>`;
+    informacoes += `<strong>Remetente:</strong> ASSOCIAÇÃO BR CLUBE DE BENEFÍCIOS<br>`;
+    informacoes += `<strong>Endereço:</strong> Av. Dep. Jamel Cecílio, 2496 - Jardim Goiás, Goiânia - GO SALA 141-A<br>`;
+    informacoes += `<strong>CEP:</strong> 74810-100<br>`;
+    informacoes += `<strong>Telefone:</strong> (62) 3434-2622<br>`;
     informacoes += `</div>`;
 
     // Atualize o conteúdo do elemento com id 'texto'
