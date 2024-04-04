@@ -1,21 +1,14 @@
 function adicionarEquipamento() {
-
     const divEquipamento = document.getElementById('equipamento1');
-    const novoCampo = document.createElement('input');
-    const numeroEquipamento = divEquipamento.getElementsByTagName('input').length + 1;
+    const novoCampo = document.createElement('div');
+    const numeroEquipamento = divEquipamento.querySelectorAll('input[name^="equipamento"]').length + 1;
 
-    novoCampo.type = 'text';
-    novoCampo.name = `equipamento ${numeroEquipamento}`;
-    novoCampo.id = `equipamento ${numeroEquipamento}`;
-    novoCampo.required = true;
+    novoCampo.innerHTML = `
+        <label for="equipamento${numeroEquipamento}">Equipamento ${numeroEquipamento}:</label>
+        <input placeholder="Número do EMEI" type="text" id="equipamento${numeroEquipamento}" name="equipamento${numeroEquipamento}" required><br>
+    `;
 
-    const label = document.createElement('label');
-    label.for = `equipamento ${numeroEquipamento}`;
-    label.innerHTML = `equipamento ${numeroEquipamento}:`;
-
-    divEquipamento.appendChild(label);
     divEquipamento.appendChild(novoCampo);
-    divEquipamento.appendChild(document.createElement('br'));
 }
 
 function downloadPDF() {
@@ -25,6 +18,8 @@ function downloadPDF() {
     // Aguarde um curto período de tempo para garantir que o conteúdo seja atualizado
     setTimeout(() => {
         const form = document.getElementById('texto');
+
+        form.innerHTML = '<img src="../Images/brclube2.png" alt="Logo da Empresa" width="80px"><br><br><br>' + form.innerHTML;
 
         //Justifique o conteúdo para o PDF
         const containerDiv = document.createElement('div');
@@ -48,7 +43,6 @@ function downloadPDF() {
 }
 
 function enviarFormulario() {
-
     const form = document.getElementById('brClubeForm');
     const dadosFormulario = new FormData(form);
 
@@ -60,23 +54,17 @@ function enviarFormulario() {
         equipamentos += `Equipamento ${index + 1}: ${input.value}<br>`;
     });
 
-    // Obtenha o valor do campo de data
-    let data = dadosFormulario.get('data1');
-
-    // Crie um objeto de data com o valor do campo
-    let dataObj = new Date(data);
-
-    // Obtenha a data formatada considerando o fuso horário local
-    let dataFormatada = dataObj.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
+    const data = dadosFormulario.get('data1');
+    const dataObj = new Date(data);
+    const dataFormatada = dataObj.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
 
     const nome = document.getElementById('nome').value;
     const cpf = document.getElementById('cpf').value;
     const rg = document.getElementById('rg').value;
 
-    let informacoes = '';
-
     const assinatura = `______________________________`;
 
+    let informacoes = '';
     informacoes += `<div style="text-align: center"><strong>TERMO DE RECEBIMENTO E RESPONSABILIDADE COM EQUIPAMENTO DE RASTREAMENTO</strong></div><br><br>`;
     informacoes += `Por meio deste documento, eu, ${nome}, com cadastro no CPF de nº ${cpf}, RG ${rg}, técnico de instalação de rastreadores, declaro que recebi os equipamentos correspondentes aos seguintes códigos:<br><br>`;
     informacoes += `${equipamentos}<br>`;
