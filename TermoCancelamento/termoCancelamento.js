@@ -1,7 +1,7 @@
 function downloadPDF() {
     const form = document.getElementById('texto');
 
-    form.innerHTML = '<img src="../Images/brclube2.png" alt="Logo da Empresa" width="80px"><br><br>' + form.innerHTML;
+    form.innerHTML = '<img src="../Images/brclube2.png" alt="Logo da Empresa" width="80px"><br><br><br>' + form.innerHTML;
 
     // Configuração das opções do html2pdf
     const options = {
@@ -67,11 +67,9 @@ function enviarFormulario() {
 
     informacoes += `<div style="text-align: center"><strong>TERMO DE CANCELAMENTO</strong></div><br>`;
 
-    informacoes += `Solicito que a partir do dia ${dataFormatada2}, o cancelamento da filiação do veículo abaixo descrito junto a Associação BR CLUBE DE BENEFÍCIOS. Ciente de que meu veículo se encontra a partir desta data, sem qualquer cobertura, portanto, não mais poderei usufruir de qualquer vantagem oferecida pela BR CLUBE.<br><br>`;
+    informacoes += `<div style="text-align: justify">Solicito que a partir do dia ${dataFormatada2}, o cancelamento da filiação do veículo abaixo descrito junto a Associação BR CLUBE DE BENEFÍCIOS. Ciente de que meu veículo se encontra a partir desta data, sem qualquer cobertura, portanto, não mais poderei usufruir de qualquer vantagem oferecida pela BR CLUBE.</div><br><br>`;
 
     informacoes += `<div style="text-align: center"><strong>DADOS DO VEÍCULO</strong></div><br>`;
-
-    informacoes += `<div style="display: flex; justify-content: space-between;">`;
 
         // Primeira coluna
         informacoes += `<div>`;
@@ -82,8 +80,6 @@ function enviarFormulario() {
         informacoes += `<div>`;
         informacoes += `<strong>Renavam:</strong> ${renavam}<br><strong>Cor:</strong> ${cor}<br><strong>Ano modelo:</strong> ${ano}<br><strong>Ano fabricação:</strong> ${anoF}<br><strong>Código FIPE:</strong> ${fipe}<br>`;
         informacoes += `</div>`;
-
-    informacoes += `</div>`;
 
     informacoes += `<br><br><div style="text-align: right">Goiânia - ${dataFormatada}</div><br><br><div style="text-align: center">________________________________<br>${nome}<br>CPF: ${cpf}</div><br><br>`;
 
