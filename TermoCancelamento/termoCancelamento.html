@@ -31,6 +31,12 @@
 
                 <div id="dadosPessoais">
 
+                    <label for="nome">Nome do associado(a): </label>
+                    <input placeholder="Nome completo" type="text" id="nome" required><br>
+
+                    <label for="cpf">CPF:</label>
+                    <input placeholder="Número do CPF" type="text" id="cpf" name="cpf" required>
+
                     <label for="itens">Tipo do veiculo:</label>
                     <select id="itens" name="itens">
                       <option value="Carro">Carro</option>
@@ -38,7 +44,7 @@
                       <option value="Caminhão">Caminhão</option>
                     </select>
 
-                    <br><br> 
+                    <br><br>
 
                     <label for="placa">Placa:</label>
                     <input placeholder="Placa do veículo" type="text" id="placa" name="placa" required>
@@ -49,20 +55,23 @@
                     <label for="modelo">Modelo:</label>
                     <input placeholder="Modelo do veículo" type="text" id="modelo" name="modelo" required>
 
+                    <label for="chassi">Chassi:</label>
+                    <input placeholder="Código do Chassi" type="text" id="chassi" name="chassi" required>
+
+                    <label for="renavam">RENAVAM:</label>
+                    <input placeholder="Código do RENAVAM" type="number" id="renavam" name="renavam" required>
+
                     <label for="cor">Cor:</label>
                     <input placeholder="Cor do veículo" type="text" id="cor" name="cor" required>
 
                     <label for="ano">Ano modelo:</label>
                     <input placeholder="Ano do veículo" type="number" id="ano" name="ano" required>
 
-                    <label for="anoF">Ano de fabricação:</label>
+                    <label for="anoF">Ano fabricação:</label>
                     <input placeholder="Ano de fabricação" type="number" id="anoF" name="anoF" required>
-
-                    <label for="renavam">RENAVAM:</label>
-                    <input placeholder="Código do RENAVAM" type="number" id="renavam" name="renavam" required>
-
-                    <label for="chassi">Chassi:</label>
-                    <input placeholder="Código do Chassi" type="text" id="chassi" name="chassi" required>
+                    
+                    <label for="fipe">Código FIPE:</label>
+                    <input placeholder="Código" type="text" id="fipe" name="fipe" required>
 
                     <label for="data2">Data de cancelamento:</label>
                     <input type="date" id="data2" required><br>
@@ -86,12 +95,9 @@
         </div>
     </div>
 
-     
-    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script src="termoCancelamento.js"></script>
     <script src="../index.js"></script>
-    </form>
 
 </body>
 

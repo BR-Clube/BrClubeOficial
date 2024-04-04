@@ -1,16 +1,7 @@
 function downloadPDF() {
     const form = document.getElementById('texto');
 
-    form.innerHTML = '<div  text-align="center"><img src="../Images/brclube2.png" alt="Logo da Empresa" width="80px"></div><br><br>' + form.innerHTML;
-
-
-    //Justificando PDF
-    const containerDiv = document.createElement('div');
-    containerDiv.style.textAlign = 'justify';
-    containerDiv.innerHTML = form.innerHTML;
-    form.innerHTML = '';
-    form.appendChild(containerDiv);
-
+    form.innerHTML = '<img src="../Images/brclube2.png" alt="Logo da Empresa" width="80px"><br><br>' + form.innerHTML;
 
     // Configuração das opções do html2pdf
     const options = {
@@ -21,11 +12,10 @@ function downloadPDF() {
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } // Configurações do jsPDF
     };
 
-    html2pdf(form, options);
+    html2pdf().set(options).from(form).save();
 }
 
 function enviarFormulario() {
-
     // Obtenha o formulário pelo ID
     const form = document.getElementById('brClubeForm');
 
@@ -60,38 +50,54 @@ function enviarFormulario() {
     const dataFormatada2 = `${dia2}/${mes2}/${anoFormatado2}`;
 
     // Obtenha os valores dos campos do formulário
+    const nome = document.getElementById('nome').value;
+    const cpf = document.getElementById('cpf').value;
     const itens = document.getElementById('itens').value;
     const placa = document.getElementById('placa').value;
     const marca = document.getElementById('marca').value;
     const modelo = document.getElementById('modelo').value;
+    const chassi = document.getElementById('chassi').value;
+    const renavam = document.getElementById('renavam').value;
     const cor = document.getElementById('cor').value;
     const ano = document.getElementById('ano').value;
     const anoF = document.getElementById('anoF').value;
-    const renavam = document.getElementById('renavam').value;
-    const chassi = document.getElementById('chassi').value;
+    const fipe = document.getElementById('fipe').value;
 
     let informacoes = '';
 
-    informacoes += `<div style="text-align: center"><strong>TERMO DE CANCELAMENTO</strong></div><br><br>`;
+    informacoes += `<div style="text-align: center"><strong>TERMO DE CANCELAMENTO</strong></div><br>`;
 
     informacoes += `Solicito que a partir do dia ${dataFormatada2}, o cancelamento da filiação do veículo abaixo descrito junto a Associação BR CLUBE DE BENEFÍCIOS. Ciente de que meu veículo se encontra a partir desta data, sem qualquer cobertura, portanto, não mais poderei usufruir de qualquer vantagem oferecida pela BR CLUBE.<br><br>`;
 
-    informacoes += `<div style="text-align: center"><strong>DADOS DO VEÍCULO</strong></div><br><br>`;
+    informacoes += `<div style="text-align: center"><strong>DADOS DO VEÍCULO</strong></div><br>`;
 
-    informacoes += `<div style="text-align: center"><strong>Tipo:</strong> ${itens} | `;
-    informacoes += `<strong>Placa:</strong> ${placa} | `;
-    informacoes += `<strong>Marca:</strong> ${marca}<br>`;
+    informacoes += `<div style="display: flex; justify-content: space-between;">`;
 
-    informacoes += `<strong>Modelo:</strong> ${modelo} | `;
-    informacoes += `<strong>Cor:</strong> ${cor} | `;
-    informacoes += `<strong>Ano modelo:</strong> ${ano}<br>`;
+        // Primeira coluna
+        informacoes += `<div>`;
+        informacoes += `<strong>Tipo:</strong> ${itens}<br><strong>Placa:</strong> ${placa}<br><strong>Marca:</strong> ${marca}<br><strong>Modelo:</strong> ${modelo}<br><strong>Chassi:</strong> ${chassi}<br>`;
+        informacoes += `</div>`;
 
-    informacoes += `<strong>Ano de fabricação:</strong> ${anoF} | `;
-    informacoes += `<strong>Renavam:</strong> ${renavam} | `;
-    informacoes += `<strong>Chassi:</strong> ${chassi}</div>`;
-    informacoes += `Goiânia - ${dataFormatada}<br><br>`;
+        // Segunda coluna
+        informacoes += `<div>`;
+        informacoes += `<strong>Renavam:</strong> ${renavam}<br><strong>Cor:</strong> ${cor}<br><strong>Ano modelo:</strong> ${ano}<br><strong>Ano fabricação:</strong> ${anoF}<br><strong>Código FIPE:</strong> ${fipe}<br>`;
+        informacoes += `</div>`;
+
+    informacoes += `</div>`;
+
+    informacoes += `<br><br><div style="text-align: right">Goiânia - ${dataFormatada}</div><br><br><div style="text-align: center">________________________________<br>${nome}<br>CPF: ${cpf}</div><br><br>`;
+
+    // Criar e inserir a imagem
+    const imagem = document.createElement('img');
+    imagem.src = '../Images/assinatura.png'; // Altere o caminho conforme necessário
+    imagem.alt = 'Assinatura do Diretor';
+    imagem.width = '150'; // Altere o tamanho conforme necessário
+    imagem.style.display = 'block'; // Define a imagem como bloco
+    imagem.style.margin = '0 auto'; // Define margens automáticas para centralizar horizontalmente
+
 
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
     elementoTexto.innerHTML = `${informacoes}`;
+    elementoTexto.appendChild(imagem); // Adicione a imagem ao elemento
 }
