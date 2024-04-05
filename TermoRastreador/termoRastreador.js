@@ -19,7 +19,7 @@ function downloadPDF() {
     setTimeout(() => {
         const form = document.getElementById('texto');
 
-        form.innerHTML = '<img src="../Images/brclube2.png" alt="Logo da Empresa" width="80px"><br><br><br>' + form.innerHTML;
+        form.innerHTML = '<img src="../Images/brclube2.png" alt="Logo da Empresa" width="60px"><br><br><br>' + form.innerHTML;
 
         //Justifique o conteúdo para o PDF
         const containerDiv = document.createElement('div');
