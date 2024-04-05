@@ -54,7 +54,7 @@ function enviarFormulario() {
 
     let informacoes = '';
 
-    informacoes += `<div style="text-align: center"><strong>PROTOCOLO DE AGENDAMENTO PARA INSTALAÇÃO DE RASTREADOR</strong></div><br><br>`;
+    informacoes += `<div style="text-align: center"><strong>*PROTOCOLO DE AGENDAMENTO PARA INSTALAÇÃO DE RASTREADOR*</strong></div><br><br>`;
 
     informacoes += `<div style="text-align: left; padding-left:40px;">`;
 
