@@ -15,7 +15,7 @@ function downloadPDF() {
     // Configuração das opções do html2pdf
     const options = {
         margin: 20, // Margens em pixels
-        filename: 'termo_quitacao.pdf', // Nome do arquivo PDF
+        filename: 'termo_entrega_de_veiculo.pdf', // Nome do arquivo PDF
         image: { type: 'jpeg', quality: 1 }, // Opções de imagem
         html2canvas: { scale: 2 }, // Configurações do html2canvas
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } // Configurações do jsPDF
@@ -52,7 +52,7 @@ function enviarFormulario() {
     
     let informacoes = '';
 
-    informacoes += `<div style="text-align: center"><strong>TERMO DE QUITAÇÃO</strong></div><br><br>`;
+    informacoes += `<div style="text-align: center"><strong>TERMO DE ENTREGA DE VEÍCULO</strong></div><br><br>`;
     informacoes += `<strong>Responsável pelo veículo:</strong> ${nome}<br><br>`;
     informacoes += `<strong>CPF/CNPJ:</strong> ${cpf}<br><br>`;
     informacoes += `<strong>Veículo:</strong> ${veiculo}<br><br>`;
