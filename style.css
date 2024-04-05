@@ -4,14 +4,19 @@ body {
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 h2 {
-text-align: center;
-color: rgb(0, 0, 0);
-font-size: 30px;  
+    text-align: left;
+    padding-left: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 30px; 
 }
 
 h2:hover {
-    color:#000096;
+    color:#00b7ff;
     font-size: 29.8px;
-    background-color: #f6fcff;
+    background-color: #f2f2f2;
 }
