@@ -20,7 +20,7 @@ function enviarFormulario() {
     informacoes += `<div style="border: 1px solid black; padding: 10px;">`;
     informacoes += `<img src="../Images/logo-3.png" alt="Logo Destinatário" style="width: 80px; height: auto;"><br>`;
     informacoes += `<strong>Remetente:</strong> ASSOCIAÇÃO BR CLUBE DE BENEFÍCIOS<br>`;
-    informacoes += `<strong>Endereço:</strong> Av. Dep. Jamel Cecílio, 2496 - Jardim Goiás, Goiânia - GO SALA 141-A<br>`;
+    informacoes += `<strong>Endereço:</strong> Edifício New Business Style: Sala 141-A | Av. Dep. Jamel Cecílio, 2496 - Jardim Goiás, Goiânia-GO.<br>`;
     informacoes += `<strong>CEP:</strong> 74810-100<br>`;
     informacoes += `<strong>Telefone:</strong> (62) 3434-2622<br>`;
     informacoes += `</div>`;
