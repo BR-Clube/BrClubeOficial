@@ -8,7 +8,7 @@ function enviarFormulario() {
     let informacoes = '';
 
     informacoes += `<div style="border: 1px solid black; padding: 10px;">`;
-    informacoes += `<img src="../Images/brclube2.png" alt="Logo Destinatário" style="width: 50px; height: auto;"><br>`;
+    informacoes += `<img src="../Images/logo-3.png" alt="Logo Destinatário" style="width: 80px; height: auto;"><br>`;
     informacoes += `<strong>Destinatário:</strong> ${destinatario}<br>`;
     informacoes += `<strong>Endereço: </strong> ${endereco}<br>`;
     informacoes += `<strong>CEP:</strong> ${cep}<br>`;
@@ -18,7 +18,7 @@ function enviarFormulario() {
     informacoes += `<br>`; 
 
     informacoes += `<div style="border: 1px solid black; padding: 10px;">`;
-    informacoes += `<img src="../Images/brclube2.png" alt="Logo Destinatário" style="width: 50px; height: auto;"><br>`;
+    informacoes += `<img src="../Images/logo-3.png" alt="Logo Destinatário" style="width: 80px; height: auto;"><br>`;
     informacoes += `<strong>Remetente:</strong> ASSOCIAÇÃO BR CLUBE DE BENEFÍCIOS<br>`;
     informacoes += `<strong>Endereço:</strong> Av. Dep. Jamel Cecílio, 2496 - Jardim Goiás, Goiânia - GO SALA 141-A<br>`;
     informacoes += `<strong>CEP:</strong> 74810-100<br>`;
