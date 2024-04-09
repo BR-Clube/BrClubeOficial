@@ -26,7 +26,7 @@
     </nav>
 
     <header>
-        <h1>ORIENTA</h1>
+        <h1>ORIENTAÇÕES PÓS-INSTALAÇÃO DE RASTREADOR</h1>
     </header>
 
     <div id="conteudoNoMeio">
@@ -34,60 +34,15 @@
             <form id="brClubeForm">
 
                 <div id="dadosPessoais">
-                    <label for="nome">Nome completo:</label>
+                    <label for="nome">Nome do associado(a):</label>
                     <input placeholder="Nome completo" type="text" id="nome" name="nome" required>
 
-                    <label for="cpf">CPF/CNPJ:</label>
-                    <input placeholder="Número do CPF ou CNPJ" type="text" id="cpf" name="cpf" required>
+                    <label for="login">Login:</label>
+                    <input placeholder="Endereço de login" type="text" id="login" name="login" required>
 
-                    <div id="data">
-                        <label for="data">Data de nascimento:</label>
-                        <input type="date" id="data" name="data" required><br>
-                    </div>
-
-                    <label for="email">E-mail: </label>
-                    <input placeholder="seu@melhoremail.com" type="email" id="email" required><br>
-
-                    <label for="telefone">Telefone/Celular:</label>
-                    <input type="text" placeholder="Número de telefone" id="telefone" maxlength="15" oninput="formatarTelefone(this)">
-
-                    <label for="genero" class="genero">Gênero:</label>
-                    <div id="genero">
-                        <label>
-                            <input type="radio" name="genero" value="Masculino"> Masculino
-                        </label>
-        
-                        <label>
-                            <input type="radio" name="genero" value="Feminino"> Feminino
-                        </label>
-                    </div>
-
-                    <label for="placa">Placa:</label>
-                    <input placeholder="Placa do veículo" type="text" id="placa" name="placa" required>
-
-                    <label for="veiculo">Veículo:</label>
-                    <input placeholder="Modelo e marca do veículo" type="text" id="veiculo" name="veiculo" required>
-
-                    <label for="cor">Cor:</label>
-                    <input placeholder="Cor do veículo" type="text" id="cor" name="cor" required>
-
-                    <label for="ano">Ano:</label>
-                    <input placeholder="Ano do veículo" type="number" id="ano" name="ano" required>
-
-                    <label for="renavam">RENAVAM:</label>
-                    <input placeholder="Código do RENAVAM" type="number" id="renavam" name="renavam" required>
-
-                    <label for="chassi">Chassi:</label>
-                    <input placeholder="Código do Chassi" type="text" id="chassi" name="chassi" required>
-
-                    <label for="emei">N.º do EMEI:</label>
-                    <input placeholder="Número do EMEI" type="number" id="emei" name="emei" required>
-
-                    <label for="endereco">Endereço:</label>
-                    <input placeholder="Rua, bairro, número" type="text" id="endereco" required><br>
-
-                    <label for="dataHora">Data/Horário:</label>
-                    <input type="datetime-local" id="dataHora" required><br>
+                    
+                    <label for="senha">Senha:</label>
+                    <input placeholder="senha do associado" type="text" id="senha" name="senha" required>
 
                 </div>
 
@@ -105,7 +60,7 @@
         </div>
     </div>
 
-    <script src="agendamento.js"></script>
+    <script src="orietacaoRastreador.js"></script>
     <script src="../index.js"></script>
 
 </body>
