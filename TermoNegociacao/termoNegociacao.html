@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Clube | Negociação</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../padrao.css">
+    <link rel="stylesheet" href="../Nav/nav.css">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.ico.png">
+</head>
+
+<body>
+    <nav>
+        <!-- Adicione a imagem da logo -->
+        <img src="../Images/brclube2.png" alt="Logo da Empresa" class="logo">
+
+        <ul>
+            <li><a href="../index.html">MENU</a></li>
+            <li><a target="_blank" href="https://portal.sivisweb.com.br/loja/012/dashboard">SIVIS</a></li>
+            <li><a target="_blank" href="https://mail.google.com/">WORKSPACE</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>TERMO DE NEGOCIAÇÃO</h1>
+
+        <div id="conteudoNoMeio">
+            <div id="brClubeContainer" class="brClubeContainer">
+                <form id="brClubeForm">
+
+                    <div id="dadosPessoais">
+
+                        <label for="numero">Número do termo:</label>
+                        <input placeholder="Número" type="number" id="numero" name="numero" required>
+
+                        <label for="nome">Nome do devedor(a):</label>
+                        <input placeholder="Nome completo" type="text" id="nome" name="nome" required>
+
+                        <label for="rg">RG:</label>
+                        <input placeholder="Número do RG" type="text" id="rg" name="rg" required>
+
+                        <label for="cpf">CPF:</label>
+                        <input placeholder="Número do CPF" type="text" id="cpf" name="cpf" required>
+
+                        <label for="endereco">Endereço:</label>
+                        <input placeholder="Endereço completo" type="text" id="endereco" name="endereco" required>
+
+                        <label for="debito">Total do débito:</label>
+                        <input placeholder="R$" type="number" id="debito" name="debito" required>
+
+                        <label for="entrada">Valor da entrada:</label>
+                        <input placeholder="R$" type="number" id="entrada" name="entrada" required>
+
+                        <label for="parcelas">Parcelas restantes:</label>
+                        <input placeholder="N.º de parcelas" type="number" id="parcelas" name="parcelas" required>
+
+                        <label for="valorParcela">Valor de cada parcela:</label>
+                        <input placeholder="R$" type="number" id="valorParcela" name="valorParcela" required>
+
+                        <label for="data">Vencimento da entrada:</label>
+                        <input type="date" id="data" name="data" required>
+
+                        <label for="data2">Data de hoje:</label>
+                        <input type="date" id="data2" name="data2" required>
+
+                    </div>
+
+                    <br>
+
+                    <button type="button" onclick="enviarFormulario()">Enviar</button>
+                    <button type="button" onclick="downloadPDF()">Download PDF</button>
+
+                </form>
+            </div>
+
+            <div id="texto-container" class="texto-container">
+                <p id="texto"></p>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+        <script src="termoNegociacao.js"></script>
+    </main>
+</body>
