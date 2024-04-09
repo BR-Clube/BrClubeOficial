@@ -91,7 +91,6 @@ function enviarFormulario() {
     imagem.style.display = 'block'; // Define a imagem como bloco
     imagem.style.margin = '0 auto'; // Define margens automáticas para centralizar horizontalmente
 
-
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
     elementoTexto.innerHTML = `${informacoes}`;
