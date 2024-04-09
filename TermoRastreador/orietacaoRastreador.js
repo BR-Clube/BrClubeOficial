@@ -1,24 +1,3 @@
-async function downloadPDF() {
-    const form = document.getElementById('texto');
-
-    form.innerHTML = '<div style="text-align: center;"><img src="../Images/brclube2.png" alt="Logo da Empresa" width="100px"></div><br><br>' + form.innerHTML;
-
-    // Configuração das opções do html2pdf
-    const options = {
-        filename: 'termo_rastreamento.pdf', // Nome do arquivo PDF
-        image: { type: 'jpeg', quality: 1 }, // Opções de imagem
-        html2canvas: { scale: 2 }, // Configurações do html2canvas
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } // Configurações do jsPDF
-    };
-
-    try {
-        const { pdf } = await html2pdf().set(options).from(form).toPdf().save();
-        console.log(pdf);
-    } catch (error) {
-        console.error(error);
-    }
-}
-
 function enviarFormulario() {
     const form = document.getElementById('brClubeForm');
 
