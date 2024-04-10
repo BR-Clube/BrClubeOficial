@@ -114,5 +114,9 @@ b {
 }
 
 #ar{
-    background-color: rgb(132, 0, 0);
+    background-color: rgb(194, 0, 0);
+}
+
+#ar:hover{
+    background-color: rgb(150, 0, 0);
 }
