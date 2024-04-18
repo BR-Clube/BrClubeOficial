@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../Nav/nav.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
-
 </head>
 
 <body>
@@ -37,24 +36,23 @@
 
                     <label for="itens">Plataforma:</label>
                     <select id="itens" name="itens">
-                      <option value="REDELOC">REDELOC</option>
-                      <option value="RASTREIE BRASIL">RASTREIE BRASIL</option>
-                      <option value="ALCANCE">ALCANCE</option>
+                      <option value="redeloc">REDELOC</option>
+                      <option value="rastreieBrasil">RASTREIE BRASIL</option>
+                      <option value="alcance">ALCANCE</option>
+                    </select>
+
+                    <br><br>
+
+                    <label for="itens2">Sistema operacional:</label>
+                    <select id="itens2" name="itens2">
+                      <option value="iphone">IPHONE</option>
+                      <option value="android">ANDROID</option>
                     </select>
 
                     <br><br>
 
                     <label for="nome">Nome do associado(a):</label>
                     <input placeholder="Nome completo" type="text" id="nome" name="nome" required>
-                    
-                    <label for="link1">Link Android:</label>
-                    <input placeholder="https://" type="text" id="link1" name="link1" required>
-
-                    <label for="link2">Link IOS:</label>
-                    <input placeholder="https://" type="text" id="link2" name="link2" required>
-
-                    <label for="link3">Nosso site:</label>
-                    <input placeholder="https://" type="text" id="link3" name="link3" required>
 
                     <label for="login">Login:</label>
                     <input placeholder="Endereço de login" type="text" id="login" name="login" required>
@@ -78,9 +76,8 @@
         </div>
     </div>
 
-    <script src="orietacaoRastreador.js"></script>
+    <script src="/TermoRastreador/orietacaoRastreador.js"></script>
     <script src="../index.js"></script>
-
 </body>
 
 </html>
