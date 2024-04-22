@@ -11,7 +11,7 @@ body {
     font-size: 40px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -25,6 +25,47 @@ h2 {
 
 h2:hover {
     font-size: 19.5px;
-    box-shadow: inset 0 0 0 25px #e6f4ff;
+    box-shadow: inset 0 0 0 25px #f3f9ff;
     opacity:1;
+}
+
+#p-ia {
+    text-align: center;
+    font-size: 18px;
+    color:#000056;
+    font-weight: bold;
+}
+
+#p-ia:hover{
+    font-size: 20px;
+    color:#00aebb;
+    box-shadow: inset 0 0 0 25px #f3f9ff;
+}
+
+#ia-img{
+    width: 1%;
+}
+
+footer {
+    background-color: #000056;
+    color: #fff;
+    padding: 7px 5px 5px 0px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#p-footer{
+    color: white;
+    font-size: 12px;
+}
+
+#p-footer:hover{
+    text-decoration: underline;
+}
+
+.icons {
+    width: 2%;
 }
