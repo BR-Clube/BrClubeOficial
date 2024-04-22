@@ -2,6 +2,13 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Impede a barra de rolagem horizontal */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
 }
 
 #utilitarios {
@@ -49,12 +56,12 @@ h2:hover {
 footer {
     background-color: #000056;
     color: #fff;
-    padding: 7px 5px 5px 0px;
+    padding: 2.6px;
     text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 #p-footer{
@@ -64,8 +71,4 @@ footer {
 
 #p-footer:hover{
     text-decoration: underline;
-}
-
-.icons {
-    width: 2%;
 }
