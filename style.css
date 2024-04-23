@@ -57,11 +57,10 @@ footer {
     font-weight: bold;
     background-color: #000056;
     color: #fff;
-    padding: 1px 1px 2.5px 0px;
     text-align: center;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    position: absolute;
-    z-index: 0;
 }
 
 #p-footer{
