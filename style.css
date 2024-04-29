@@ -64,10 +64,11 @@ footer {
 }
 
 #p-footer{
-    color: white;
+    color: rgb(228, 228, 228);
     font-size: 12px;
 }
 
 #p-footer:hover{
     text-decoration: underline;
+    color: #cfcfcf;
 }
