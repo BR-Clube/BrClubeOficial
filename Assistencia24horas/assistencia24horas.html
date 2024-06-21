@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Clube | Assistência 24 horas</title>
+    <link rel="stylesheet" href="../padrao.css">
+    <link rel="stylesheet" href="../Nav/nav.css">
+    <link rel="shortcut icon" type="imagex/png" href="../Images/favicon.ico.png">
+</head>
+
+<body>
+
+    <nav>
+        <!-- Adicione a imagem da logo -->
+        <img src="../Images/brclube2.png" alt="Logo da Empresa" class="logo">
+
+        <ul>
+            <li><a href="../index.html">MENU</a></li>
+            <li><a target="_blank" href="https://portal.sivisweb.com.br/loja/012/dashboard">SIVIS</a></li>
+            <li><a target="_blank" href="https://mail.google.com/">WORKSPACE</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Assistência 24 horas</h1>
+    </header>
+
+    <div id="conteudoNoMeio">
+        <div id="brClubeContainer" class="brClubeContainer">
+            <form id="brClubeForm">
+
+                <label for="protocolo">Protocolo:</label>
+                <input placeholder="Código do protocolo" type="text" id="protocolo" required><br>
+
+                <label for="dataHora">Data/Horário:</label>
+                <input placeholder="" type="datetime-local" id="dataHora" required><br>
+
+                <label for="placa">Placa</label>
+                <input placeholder="Placa do veículo" type="text" id="placa" required><br>
+
+                <label for="modelo">Modelo:</label>
+                <input placeholder="Modelo do veículo" type="text" id="modelo" required><br>
+
+                <label for="cor">Cor:</label>
+                <input placeholder="Cor do veículo" type="text" id="cor" required><br>
+
+                <label for="solicitante">Solicitante:</label>
+                <input placeholder="Nome completo do solicitante" type="text" id="solicitante" required><br>
+
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" placeholder="Número de telefone" id="telefone" maxlength="15" oninput="formatarTelefone(this)">
+
+                <label for="fatorGerador">Fator Gerador:</label>
+                <input placeholder="Causa do evento" type="text" id="fatorGerador" required><br>
+
+                <label for="observacaoFatorGerador">Observação do Fator Gerador:</label>
+                <textarea placeholder="Observações adicionais..." id="observacaoFatorGerador" required></textarea><br>
+
+                <label for="genero" class="genero">Chave e documento estão no local?</label>
+                <div id="genero">
+                    <label>
+                        <input type="radio" name="genero" value='Sim'> Sim
+                    </label>
+
+                    <label>
+                        <input type="radio" name="genero" value='Não'> Não
+                    </label>
+                </div>
+
+                <label for="observacaoResposta">Observação:</label>
+                <textarea placeholder="Observações adicionais..." id="observacaoResposta" required></textarea><br>
+
+                <label for="genero2" class="genero2">Veículo de Fácil Acesso?</label>
+                <div id="genero2">
+                    <label>
+                        <input type="radio" name="genero2" value='Sim'> Sim
+                    </label>
+
+                    <label>
+                        <input type="radio" name="genero2" value='Não'> Não
+                    </label>
+                </div>
+
+                <label for="observacaoResposta2">Observação:</label>
+                <textarea placeholder="Observações adicionais..." id="observacaoResposta2" required></textarea><br>
+
+                <label for="servico">Serviço:</label>
+                <input placeholder="Tipo de serviço" type="text" id="servico" required><br>
+
+                <label for="enderecoOrigem">Endereço de Origem:</label>
+                <input placeholder="Rua, bairro, número" type="text" id="enderecoOrigem" required><br>
+
+                <label for="referenciaOrigem">Referência de Origem:</label>
+                <input placeholder="Ponto de referência" type="text" id="referenciaOrigem" required><br>
+
+                <label for="destino">Destino:</label>
+                <input placeholder="Rua, bairro, número" type="text" id="destino" required><br>
+
+                <label for="referenciaDestino">Referência de Destino:</label>
+                <input placeholder="Ponto de referência" type="text" id="referenciaDestino" required><br>
+
+                <label for="km">Quilometragem: </label>
+                <input placeholder="Km rodado" type="text" id="km" required><br>
+
+                <label for="kmTotal">Quilometragem total: </label>
+                <input placeholder="Km total rodado" type="text" id="kmTotal" required><br>
+
+                <button type="button" onclick="enviarFormulario()">Enviar</button>
+                <button type="button" onclick="copiarTexto()">Copiar Texto</button>
+
+                <br><br>
+            </form>
+        </div>
+    </div>
+
+    <div id="texto-container" class="texto-container">
+        <p id="texto"></p>
+    </div>
+
+    <script src="assistencia24horas.js"></script>
+    <script src="../index.js"></script>
+
+</body>
+
+</html>
