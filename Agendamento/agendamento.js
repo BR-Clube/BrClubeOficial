@@ -18,7 +18,7 @@ function enviarFormulario() {
     textoConfirmacao += `<strong>*Serviço agendado:*</strong> ${servico}<br>`;
     textoConfirmacao += `<strong>*Local:*</strong> ${endereco}<br><br>`;
     textoConfirmacao += `Recomendamos a retirada dos objetos de valor de dentro de seu veículo antes do atendimento.<br><br>`;
-    textoConfirmacao += `Obs.: Muito importante a sua pontualidade para que possam também ser pontuais no seu atendimento.<br><br>`;
+    textoConfirmacao += `*Obs.:* Muito importante a sua pontualidade para que possam também ser pontuais no seu atendimento.<br><br>`;
     textoConfirmacao += `Caso não possa comparecer, por gentileza nos informar através desse canal ou no telefone 3434-2622.<br><br>`;
     textoConfirmacao += `Cordialmente,<br><br>`;
     textoConfirmacao += `Central de Agendamento<br><br>`;
