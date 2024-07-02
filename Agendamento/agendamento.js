@@ -13,7 +13,7 @@ function enviarFormulario() {
     var dataFormatadaStr = `${dataFormatada.getDate()}/${dataFormatada.getMonth() + 1}/${dataFormatada.getFullYear()} ${dataFormatada.getHours()}:${dataFormatada.getMinutes()}`;
 
     // Construindo o texto de confirmação em HTML formatado
-    var textoConfirmacao = `<strong>*Confirmação de agendamento na*</strong> ${nomeOficina}<strong> *, com o responsável*</strong> ${responsavel}<strong>.</strong><br>`;
+    var textoConfirmacao = `<strong>*Confirmação do seu agendamento na*</strong> ${nomeOficina}<strong> *com o responsável*</strong> ${responsavel}<strong>.</strong><br>`;
     textoConfirmacao += `<strong>*Data e horário do agendamento:*</strong> ${dataFormatadaStr}<br>`;
     textoConfirmacao += `<strong>*Serviço agendado:*</strong> ${servico}<br>`;
     textoConfirmacao += `<strong>*Local:*</strong> ${endereco}<br><br>`;
