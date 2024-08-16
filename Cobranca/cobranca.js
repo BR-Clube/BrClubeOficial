@@ -37,9 +37,10 @@ function adicionarBoleto() {
 function enviarFormulario() {
     const nome = document.getElementById('nome').value;
     const placa = document.getElementById('placa').value;
-
-    const generoElement = document.querySelector('input[name="genero"]:checked');
-    const genero = generoElement ? generoElement.value : '';
+    
+    // Pega o valor do campo select de gênero
+    const generoElement = document.getElementById('genero');
+    const genero = generoElement.value;
 
     const boletos = document.querySelectorAll('.boleto');
     let totalValor = 0;

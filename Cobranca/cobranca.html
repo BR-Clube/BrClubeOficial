@@ -36,11 +36,12 @@
                 <label for="placa">Placa/Veículo:</label>
                 <input type="text" id="placa" name="placa" required><br>
 
-                <label>Gênero:</label>
-                <input type="radio" id="genero-m" name="genero" value="m" required>
-                <label for="genero-m">Masculino</label>
-                <input type="radio" id="genero-f" name="genero" value="f" required>
-                <label for="genero-f">Feminino</label><br>
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Selecione o gênero</option>
+                    <option value="m">Masculino</option>
+                    <option value="f">Feminino</option>
+                </select><br>                
 
                 <div id="boletos-container">
                     <h3>Boletos Vencidos</h3>
@@ -56,7 +57,7 @@
 
                 <button type="button" onclick="enviarFormulario()">Enviar</button>
 
-                <button type="button" onclick="copiarTexto()">Copiar Texto</button>
+                        <button type="button" onclick="copiarTexto()">Copiar Texto</button>
 
             </form>
 
