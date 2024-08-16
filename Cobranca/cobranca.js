@@ -75,3 +75,12 @@ function enviarFormulario() {
     const elementoTexto = document.getElementById("texto");
     elementoTexto.innerHTML = `${saudacao}${informacoes}`;
 }
+
+function copiarTexto() {
+    const texto = document.getElementById("texto").innerText; // Pega o texto sem HTML
+    navigator.clipboard.writeText(texto).then(() => {
+        alert("Texto copiado para a área de transferência!");
+    }).catch(err => {
+        alert("Erro ao copiar o texto: " + err);
+    });
+}
