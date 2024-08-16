@@ -19,33 +19,51 @@ function formataMes(mesAtual) {
     return `${mesFormatado}/${anoFormatado}`;
 }
 
+function adicionarBoleto() {
+    const boletosContainer = document.getElementById('boletos-container');
+
+    const novoBoleto = document.createElement('div');
+    novoBoleto.classList.add('boleto');
+    novoBoleto.innerHTML = `
+        <label for="data">Data de Vencimento:</label>
+        <input type="date" class="data" required><br>
+
+        <label for="valor">Valor:</label>
+        <input type="number" class="valor" required><br>
+    `;
+    boletosContainer.appendChild(novoBoleto);
+}
+
 function enviarFormulario() {
-    // Obtenha os valores dos campos do formulário
     const nome = document.getElementById('nome').value;
     const placa = document.getElementById('placa').value;
-    const dinheiroTotal = document.getElementById('dinheiroTotal').value;
 
-    // Obtenha o valor do campo de radio de gênero
     const generoElement = document.querySelector('input[name="genero"]:checked');
     const genero = generoElement ? generoElement.value : '';
 
-    // Obtenha a data atual
-    const dataElement = document.getElementById('data');
-    const mesAtualElement = document.getElementById('mes');
-    const data = dataElement.value;
-    const mesAtual = mesAtualElement.value;
+    const boletos = document.querySelectorAll('.boleto');
+    let totalValor = 0;
+    let boletosInfo = '';
 
-    // Crie a saudação e as informações a serem exibidas
+    boletos.forEach(boleto => {
+        const dataElement = boleto.querySelector('.data').value;
+        const valorElement = boleto.querySelector('.valor').value;
+        totalValor += parseFloat(valorElement);
+
+        boletosInfo += `<strong>Vencimento:</strong> ${formataData(dataElement)} <br>`;
+        boletosInfo += `<strong>Valor:</strong> R$ ${parseFloat(valorElement).toFixed(2)} <br><br>`;
+    });
+
     let saudacao = '';
-    let informacoes = '';
-
     if (genero === 'm') {
-        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sr. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês ${formataMes(mesAtual)}.  <br><br> <strong>Placa/Veículo:</strong> ${placa} <br><br> <strong>Vencimento:</strong> ${formataData(data)} <br><br>`;
+        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sr. ${nome}, até o presente momento nosso sistema não identificou o pagamento dos seguintes boletos vencidos.  <br><br> <strong>Placa/Veículo:</strong> ${placa} <br><br>`;
     } else if (genero === 'f') {
-        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sra. ${nome}, até o presente momento nosso sistema não identificou o pagamento de sua mensalidade referente ao mês ${formataMes(mesAtual)}. <br><br> <strong>Placa/Veículo:</strong> ${placa} <br><br> <strong>Vencimento:</strong> ${formataData(data)} <br><br>`;
+        saudacao = `<b><br>Olá, ${nome}! <br><br> Tudo bem com você? <br><br> Sra. ${nome}, até o presente momento nosso sistema não identificou o pagamento dos seguintes boletos vencidos.  <br><br> <strong>Placa/Veículo:</strong> ${placa} <br><br>`;
     }
 
-    informacoes += `<strong>TOTAL:</strong> R$ ${dinheiroTotal}<br><br>`;
+    let informacoes = '';
+    informacoes += boletosInfo;
+    informacoes += `<strong>TOTAL:</strong> R$ ${totalValor.toFixed(2)}<br><br>`;
     informacoes += `Neste caso, informamos que o pagamento AINDA poderá ser feito via PIX, sem ocorrência de juros por atraso.<br><br>`;
     informacoes += `<strong>Nosso código pix é CNPJ:</strong><br><br>`;
     informacoes += `40.410.992/0001-40 <br><br>`;
@@ -54,7 +72,6 @@ function enviarFormulario() {
     informacoes += `De já, externamos nossa gratidão!<br><br>`;
     informacoes += `<strong>Equipe BrClube!<strong>`;
 
-    // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
     elementoTexto.innerHTML = `${saudacao}${informacoes}`;
 }
