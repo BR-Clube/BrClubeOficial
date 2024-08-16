@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Clube | Kit de associado</title>
+    <link rel="stylesheet" href="../padrao.css">
+    <link rel="stylesheet" href="../Nav/nav.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../Images/favicon.ico">
+</head>
+
+<body>
+    <nav>
+        <img src="../Images/brclube2.png" alt="Logo da Empresa" class="logo">
+        <ul>
+            <li><a href="../index.html">MENU</a></li>
+            <li><a target="_blank" href="https://portal.sivisweb.com.br/loja/012/dashboard">SIVIS</a></li>
+            <li><a target="_blank" href="https://mail.google.com/">WORKSPACE</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>CONFIRMAR RECEBIMENTO DO KIT DE ASSOCIADO</h1>
+    </header>
+    <div id="brClubeContainer" class="brClubeContainer">
+        <form id="brClubeForm">
+            <label for="name">Nome do Associado:</label>
+            <input type="text" id="name" name="name" placeholder="Nome completo" required>
+
+            <label for="received">Associado recebeu o Kit?</label>
+            <select id="received" name="received">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <br><br>
+
+            <button type="button" onclick="enviarFormulario()">Enviar</button>
+            <button class="copy-button" onclick="copiarTexto()">Copiar Texto</button>
+
+        </form>
+    </div>
+
+    <div id="texto-container" class="texto-container">
+        <p id="responseMessage"></p>
+    </div>
+
+    <script src="./kitDoAssociado.js"></script>
+</body>
+
+</html>
