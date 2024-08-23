@@ -113,6 +113,10 @@ b {
     font-weight: normal;
 }
 
+a {
+    text-decoration: none;
+}
+
 #ar{
     background-color: rgb(194, 0, 0);
 }

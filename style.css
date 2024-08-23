@@ -12,6 +12,13 @@ main {
     margin-bottom: 50px; /* Espaço para o footer */
 }
 
+h1 {
+    background-color: #000056;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
 
 #utilitarios {
     color: white;
@@ -23,6 +30,7 @@ main {
 a {
     text-decoration: none;
 }
+
 
 h2 {
     text-align: left;
