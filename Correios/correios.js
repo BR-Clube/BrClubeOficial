@@ -22,7 +22,7 @@ function enviarFormulario() {
     informacoes += `<strong>Remetente:</strong> ASSOCIAÇÃO BR CLUBE DE BENEFÍCIOS<br>`;
     informacoes += `<strong>Endereço:</strong> Edifício New Business Style: Sala 141-A | Av. Dep. Jamel Cecílio, 2496 - Jardim Goiás, Goiânia-GO.<br>`;
     informacoes += `<strong>CEP:</strong> 74810-100<br>`;
-    informacoes += `<strong>Telefone:</strong> (62) 3434-2622<br>`;
+    informacoes += `<strong>Telefone:</strong> 4020-0164<br>`;
     informacoes += `</div>`;
 
     // Atualize o conteúdo do elemento com id 'texto'

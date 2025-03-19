@@ -32,7 +32,7 @@ function enviarFormulario() {
     informacoes += `🎊 Parabéns por você escolher a BR CLUBE!<br>`;
     informacoes += `#UmaNovaExperiência #OsMelhoresBenefícios<br><br>`;
     informacoes += `🙋🏻*CASO NÃO* receba o boleto até 5 dias antes do vencimento favor entrar em contato conosco: <br><br>`;
-    informacoes += `<strong>*NOSSO NÚMERO COMERCIAL:*</strong> <br><br> ☎ (62) 3434-2622<br><br><strong>*PARA ASSISTÊNCIA 24H:*</strong> <br><br> *Whatsapp:* (62) 3434-2622`;
+    informacoes += `<strong>*NOSSO NÚMERO COMERCIAL:*</strong> <br><br> ☎ 4020-0164<br><br><strong>*PARA ASSISTÊNCIA 24H:*</strong> <br><br> *Whatsapp:* 4020-0164`;
 
     // Atualize o conteúdo do elemento com id 'texto'
     const elementoTexto = document.getElementById("texto");
