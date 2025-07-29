@@ -1,4 +1,4 @@
-*{
+* {
     font-size: 20px;
 }
 
@@ -30,7 +30,7 @@ input {
     box-sizing: border-box;
 }
 
-textarea{
+textarea {
     margin-bottom: 20px;
     width: 100%;
     background-color: #f2f9ff;
@@ -44,6 +44,16 @@ textarea{
     /* Ajuste a largura do formulário conforme necessário */
     float: left;
     padding-left: 35px;
+}
+
+.brClubeContainer form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-column {
+    flex: 1;
+    padding: 0 10px;
 }
 
 .texto-container {
@@ -117,10 +127,10 @@ a {
     text-decoration: none;
 }
 
-#ar{
+#ar {
     background-color: rgb(194, 0, 0);
 }
 
-#ar:hover{
+#ar:hover {
     background-color: rgb(150, 0, 0);
 }
