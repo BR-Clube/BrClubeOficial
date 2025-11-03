@@ -134,3 +134,13 @@ a {
 #ar:hover {
     background-color: rgb(150, 0, 0);
 }
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+.btn-secondary {
+  opacity: 0.9;
+}
