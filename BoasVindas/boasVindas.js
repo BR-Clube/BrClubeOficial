@@ -105,6 +105,18 @@ function limparFormulario() {
     if (el) el.value = '';
   });
 
+  function copiarMensagem() {
+  const out = document.getElementById('texto');
+  if (!out || !out.innerText.trim()) {
+    alert('Gere a mensagem antes de copiar.');
+    return;
+  }
+  const textoPlano = out.innerText.replace(/\n{3,}/g, '\n\n').trim();
+  navigator.clipboard.writeText(textoPlano)
+    .then(() => alert('Mensagem copiada!'))
+    .catch(() => alert('Não foi possível copiar automaticamente. Selecione e copie manualmente.'));
+}
+
   // Select forma de pagamento
   const forma = document.getElementById('formaPagamento');
   if (forma) forma.value = '';
