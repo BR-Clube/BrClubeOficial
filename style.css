@@ -291,3 +291,13 @@ button[onclick*="enviarFormulario"]{
   .form-actions button{ flex:1; }
 }
 .form-actions button:focus-visible{ outline:2px solid var(--brand-light); outline-offset:2px; }
+
+#texto .msg-title{ font-size:22px; margin:0 0 10px; }
+#texto .section{ margin:14px 0; }
+#texto .section-title{
+  font-weight:800; color:#0F172A; margin:6px 0 6px;
+  border-left:4px solid var(--brand-light); padding-left:10px;
+}
+#texto .list{ margin:8px 0 0 0; padding-left:0; list-style:none; }
+#texto .list li{ margin:6px 0; }
+#texto .note{ margin-top:6px; }
