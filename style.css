@@ -301,3 +301,20 @@ button[onclick*="enviarFormulario"]{
 #texto .list{ margin:8px 0 0 0; padding-left:0; list-style:none; }
 #texto .list li{ margin:6px 0; }
 #texto .note{ margin-top:6px; }
+
+.site-header{
+  background:#fff; box-shadow:var(--shadow); margin:0 0 18px; padding:10px 16px;
+  display:flex; align-items:center; justify-content:space-between; border-radius:10px;
+}
+.site-header .brand{ display:flex; align-items:center; gap:10px; }
+.site-header .logo{ height:34px; width:auto; }
+.mainnav ul{ display:flex; gap:12px; list-style:none; margin:0; padding:0; }
+.mainnav a{
+  display:inline-block; padding:8px 10px; border-radius:8px;
+  text-decoration:none; color:var(--brand-dark); font-weight:700; background:rgba(0,174,239,.10);
+}
+.mainnav a:hover{ background:rgba(0,174,239,.18); }
+@media (max-width:780px){
+  .site-header{ flex-direction:column; align-items:flex-start; gap:8px; }
+  .mainnav ul{ flex-wrap:wrap; }
+}
