@@ -318,3 +318,9 @@ button[onclick*="enviarFormulario"]{
   .site-header{ flex-direction:column; align-items:flex-start; gap:8px; }
   .mainnav ul{ flex-wrap:wrap; }
 }
+@media (max-width:680px){
+  form .row{ display:block; }
+  input, select, textarea{ font-size:16px; } /* evita zoom em iOS */
+  .form-actions{ flex-direction:column; align-items:stretch; }
+  .form-actions button{ width:100%; }
+}
