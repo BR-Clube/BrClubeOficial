@@ -20,7 +20,7 @@ function enviarFormulario() {
       🎉 <b>Bem-vindo, ${nome}!</b><br>
       Você agora faz parte da <b>comunidade BR Clube</b>!<br>
       Nossa missão é <b>cuidar do que é importante para você</b> e estar ao seu lado sempre que precisar.<br>
-      Com <b>excelência, solidez e confiança</b>, construímos proteção patrimonial séria e verdadeira para você e sua família. 💙💙
+      Com <b>excelência,</b> oferecemos uma nova perspectiva de proteção patrimonial para você e sua família. 💙💙
       <br><br>
     `;
   } else if (genero === 'f') {
@@ -28,28 +28,34 @@ function enviarFormulario() {
       🎉 <b>Bem-vinda, ${nome}!</b><br>
       Você agora faz parte da <b>comunidade BR Clube</b>!<br>
       Nossa missão é <b>cuidar do que é importante para você</b> e estar ao seu lado sempre que precisar.<br>
-      Com <b>excelência, solidez e confiança</b>, construímos proteção patrimonial séria e verdadeira para você e sua família. 💙💙
+      Com <b>excelência,</b> oferecemos uma nova perspectiva de proteção patrimonial para você e sua família. 💙💙
       <br><br>
-    `;
+      `;
   } else {
     saudacao = `
       🎉 <b>Bem-vindo(a), ${nome}!</b><br>
       Você agora faz parte da <b>comunidade BR Clube</b>!<br>
       Nossa missão é <b>cuidar do que é importante para você</b> e estar ao seu lado sempre que precisar.<br>
-      Com <b>excelência, solidez e confiança</b>, construímos proteção patrimonial séria e verdadeira para você e sua família. 💙💙
+      Com <b>excelência,</b> oferecemos uma nova perspectiva de proteção patrimonial para você e sua família. 💙💙
       <br><br>
-    `;
+      `;
   }
 
   // 2) Conferência dos dados
   const dados = `
     <b>✅ Confira seus dados cadastrados:</b><br>
+    
     🅿 <b>Placa:</b> ${placa}<br>
+    
     📍 <b>Endereço:</b> ${endereco}<br>
+    
     📬 <b>CEP:</b> ${cep}<br>
+    
     📧 <b>E-mail:</b> ${email}<br>
+    
     📲 <b>Telefone para contato:</b> ${telefone}<br>
-    <small><i>Se encontrar algum erro ou houver mudança de endereço, e-mail, telefone ou CEP, por favor nos avise prontamente para mantermos seu cadastro atualizado.</i></small>
+    
+    <small><i>Se encontrar algum erro ou houver mudança de endereço, e-mail, telefone ou CEP, por favor, nos avise prontamente para mantermos seu cadastro atualizado.</i></small>
     <br><br>
   `;
 
@@ -63,11 +69,16 @@ function enviarFormulario() {
     `;
   } else if (formaPagamento === 'boleto') {
     pagamento += `
+    
       <b>Vencimento escolhido:</b> dia <b>${boleto}</b> de cada mês.<br>
+      
       O <b>boleto será enviado pelo WhatsApp</b> até <b>5 dias antes</b> do vencimento.<br>
-      Para <b>evitar atraso</b>, o <b>pagamento em dia é impreterível/imprescindível</b> para manter sua <b>proteção ativa</b> — com <b>todos os seus benefícios</b>.<br>
+      
+      <b>Evite atrasos</b>, o <b>pagamento em dia é impreterível/imprescindível</b> para manter sua <b>proteção ativa</b> — com <b>todos os seus benefícios</b>.<br>
       <b>Não recebeu o boleto até 5 dias antes?</b> Avise-nos com a <b>maior brevidade possível</b> para providenciarmos imediatamente.<br><br>
+      
       <b>Quer mais comodidade?</b><br>
+      
       Você pode optar pela <b>cobrança recorrente no cartão</b> (não usa limite; funciona como assinatura):<br>
       🔗 <a href="https://portal.sivisweb.com.br/loja/012/login" target="_blank" rel="noopener">Cadastrar cartão agora</a>
       <br><br>
@@ -77,16 +88,24 @@ function enviarFormulario() {
   // 4) Canais oficiais
   const canais = `
     <b>🆘 Canais oficiais</b><br>
-    <b>FALE CONOSCO (Comercial):</b> 4020-0164<br>
-    <b>ASSISTÊNCIA 24h (Brasil):</b> WhatsApp: 4020-0164 • Telefone: 4020-0164
+    
+    <b>FALE CONOSCO:</b> 4020-0164<br>
+    
+    <b>ASSISTÊNCIA 24h (Brasil):
+    </b> WhatsApp: 4020-0164
+         Telefone: 4020-0164
     <br><br>
   `;
 
   // 5) Continue com a BR Clube
   const continuar = `
     <b>🚀 Continue com a BR Clube</b><br>
-    Fique por dentro de benefícios, descontos e conteúdos exclusivos para associados:<br>
+    
+    Fique por dentro de benefícios, descontos e conteúdos exclusivos para associados:
+    
+    <br>
     🌐 <a href="https://www.brclube.org" target="_blank" rel="noopener">www.brclube.org</a><br>
+    
     📸 <a href="https://instagram.com/brclubeoficial" target="_blank" rel="noopener">@brclubeoficial</a>
     <br>
   `;
