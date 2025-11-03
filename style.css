@@ -145,3 +145,148 @@ main h3.submenu {
 main hr {
     margin: 15px 0;
 }
+/* ===== BR Clube – UI base ===== */
+:root{
+  --brand-dark:#001E44;     /* azul escuro BR Clube */
+  --brand-light:#00AEEF;    /* azul claro BR Clube */
+  --accent:#FFB400;         /* âmbar opcional para detalhes */
+  --text:#1F2937;           /* cinza escuro legível */
+  --muted:#6B7280;          /* cinza médio */
+  --bg:#F6F8FB;             /* fundo suave */
+  --white:#FFFFFF;
+  --radius:10px;
+  --shadow:0 8px 22px rgba(0,0,0,.06);
+}
+
+html,body{
+  background:var(--bg);
+  color:var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+  line-height:1.45;
+}
+
+/* Container central */
+.container,
+.page,
+.main,
+#app{
+  max-width: 920px;
+  margin: 28px auto 80px;
+  padding: 0 16px;
+}
+
+/* Título */
+h1{
+  font-size: clamp(26px, 4vw, 36px);
+  letter-spacing:.3px;
+  margin: 12px 0 18px;
+  color: var(--brand-dark);
+  font-weight: 800;
+}
+h1::after{
+  content:"";
+  display:block;
+  width: 120px;
+  height: 4px;
+  margin-top: 10px;
+  background: linear-gradient(90deg,var(--brand-light),transparent);
+  border-radius: 999px;
+}
+
+/* Menu (lista de links do topo) */
+nav ul{
+  display:flex; flex-wrap:wrap; gap:8px 14px;
+  list-style:none; padding:0; margin:10px 0 20px;
+}
+nav ul a{
+  text-decoration:none;
+  color:var(--brand-dark);
+  font-weight:600;
+  padding:6px 10px;
+  border-radius:8px;
+  background:rgba(0,174,239,.10);
+}
+nav ul a:hover{ background:rgba(0,174,239,.18); }
+
+/* Cartão do formulário */
+.form-card, form{
+  background:var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 18px;
+}
+
+/* Campos */
+label{ display:block; font-weight:600; margin: 14px 0 6px; }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select, textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color .15s, box-shadow .15s;
+}
+input:focus, select:focus, textarea:focus{
+  outline: none;
+  border-color: var(--brand-light);
+  box-shadow: 0 0 0 3px rgba(0,174,239,.18);
+}
+
+/* Radios de gênero */
+.genero{ margin-top: 6px; }
+#genero label{ display:inline-flex; align-items:center; gap:6px; margin-right: 14px; }
+
+/* Ações do formulário */
+.form-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
+  margin-top:16px;
+}
+button{
+  border:0;
+  padding:10px 16px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  transition: transform .05s ease-in, box-shadow .2s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+button:active{ transform: translateY(1px); }
+button[onclick*="enviarFormulario"]{
+  background: var(--brand-dark);
+  color:#fff;
+}
+.btn-secondary{
+  background: var(--brand-light);
+  color:#00324f; /* contraste agradável no azul claro */
+}
+
+/* Mensagem gerada – card */
+#texto-container{
+  margin-top: 22px;
+}
+#texto{
+  display:block;
+  background: var(--white);
+  border-left: 5px solid var(--brand-light);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 18px 16px 16px;
+}
+#texto b{ color:#0F172A; }            /* pretinho elegante para negrito */
+#texto small{ color: var(--muted); }   /* observações */
+#texto a{ color: var(--brand-dark); font-weight:700; }
+#texto a:hover{ text-decoration: underline; }
+
+/* Responsivo */
+@media (max-width:680px){
+  nav ul{ gap:6px 10px; }
+  .form-actions{ justify-content: stretch; }
+  .form-actions button{ flex:1; }
+}
