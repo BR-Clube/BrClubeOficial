@@ -290,3 +290,4 @@ button[onclick*="enviarFormulario"]{
   .form-actions{ justify-content: stretch; }
   .form-actions button{ flex:1; }
 }
+.form-actions button:focus-visible{ outline:2px solid var(--brand-light); outline-offset:2px; }
